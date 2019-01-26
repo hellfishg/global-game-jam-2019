@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=1]
+[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "abierto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "cerrado",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 115.602, 121.125 )
+
+[node name="itemCambio" type="Node" index="0"]
+
+[node name="Area_ItemCambio" type="Area2D" parent="." index="0" groups=[
+"accionables",
+]]
+
+position = Vector2( 159.045, 177.222 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Audio Bus", "Collision", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Spr_ItemCambio" type="AnimatedSprite" parent="Area_ItemCambio" index="0"]
+
+frames = SubResource( 1 )
+animation = "cerrado"
+
+[node name="Col_ItemCambio" type="CollisionShape2D" parent="Area_ItemCambio" index="1"]
+
+shape = SubResource( 2 )
+
+
