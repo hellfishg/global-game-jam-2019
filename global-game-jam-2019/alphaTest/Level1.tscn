@@ -4,32 +4,32 @@
 [ext_resource path="res://alphaTest/my_tileSet.tres" type="TileSet" id=2]
 [ext_resource path="res://alphaTest/PJ.tscn" type="PackedScene" id=3]
 [ext_resource path="res://alphaTest/CanvasLayer.gd" type="Script" id=4]
-[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=5]
-[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=6]
-[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=7]
+[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=5]
+[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=6]
+[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=7]
 [ext_resource path="res://alphaTest/Barra_vomito.gd" type="Script" id=8]
 [ext_resource path="res://imagesAlpha/inventario.png" type="Texture" id=9]
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "medio",
+"name": "lleno",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "vacio",
+"name": "medio",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "lleno",
+"name": "vacio",
 "speed": 5.0
 } ]
 
-[node name="Node" type="Node" index="0"]
+[node name="Node" type="Node"]
 
 script = ExtResource( 1 )
 Mob = null
@@ -77,7 +77,7 @@ script = ExtResource( 4 )
 
 position = Vector2( 230.689, 869.592 )
 scale = Vector2( 0.537929, 1.04354 )
-frames = SubResource( 4 )
+frames = SubResource( 1 )
 animation = "lleno"
 script = ExtResource( 8 )
 _sections_unfolded = [ "Transform" ]

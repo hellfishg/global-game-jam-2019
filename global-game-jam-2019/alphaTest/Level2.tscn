@@ -1,48 +1,32 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://alphaTest/my_tileSet.tres" type="TileSet" id=1]
-[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=2]
-[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=3]
-[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=4]
-[ext_resource path="res://imagesAlpha/inventario.png" type="Texture" id=5]
-[ext_resource path="res://alphaTest/Area2D.gd" type="Script" id=6]
-[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=7]
-[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=8]
-[ext_resource path="res://KinematicBody2D.gd" type="Script" id=9]
-[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=10]
-[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=11]
-[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=12]
-
-[sub_resource type="SpriteFrames" id=1]
-
-animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "lleno",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "vacio",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "medio",
-"speed": 5.0
-} ]
+[ext_resource path="res://alphaTest/Area2D.gd" type="Script" id=2]
+[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=3]
+[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=4]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=5]
+[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=6]
+[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=7]
+[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=8]
+[ext_resource path="res://alphaTest/Level1.gd" type="Script" id=9]
+[ext_resource path="res://alphaTest/CanvasLayer.gd" type="Script" id=10]
+[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=11]
+[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=12]
+[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=13]
+[ext_resource path="res://alphaTest/Barra_vomito.gd" type="Script" id=14]
+[ext_resource path="res://imagesAlpha/inventario.png" type="Texture" id=15]
 
 [sub_resource type="SpriteFrames" id=2]
 
 animations = [ {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "abierto",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "cerrado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "abierto",
 "speed": 5.0
 } ]
 
@@ -59,27 +43,44 @@ extents = Vector2( 10, 10 )
 [sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
-"frames": [ ExtResource( 10 ) ],
-"loop": true,
-"name": "mover",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "salto",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "mover",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "lleno",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "medio",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "vacio",
 "speed": 5.0
 } ]
 
 [node name="Level2" type="Node" index="0"]
 
 [node name="Node" type="Node" parent="." index="0"]
-
-editor/display_folded = true
 
 [node name="TileMap" type="TileMap" parent="Node" index="0"]
 
@@ -99,32 +100,8 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( -131071, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 131076, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 262146, 0, 0, 393220, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 524290, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 786455, 0, 0, 786456, 0, 0, 786457, 0, 0, 786458, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0 )
+tile_data = PoolIntArray( -131071, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 131076, 0, 0, 131093, 0, 0, 131094, 0, 0, 131095, 0, 0, 131096, 0, 0, 262146, 0, 0, 393220, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 524290, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 786455, 0, 0, 786456, 0, 0, 786457, 0, 0, 786458, 0, 0, 786459, 0, 0, 786460, 0, 0, 786461, 0, 0, 786462, 0, 0, 786463, 0, 0, 786464, 0, 0, 786465, 0, 0, 786466, 0, 0, 786467, 0, 0, 786468, 0, 0, 786469, 0, 0, 786470, 0, 0, 786471, 0, 0, 786472, 0, 0, 786473, 0, 0, 786474, 0, 0, 786475, 0, 0, 786476, 0, 0, 786477, 0, 0, 786478, 0, 0, 786479, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 852016, 0, 0, 852017, 0, 0, 852018, 0, 0, 852019, 0, 0, 852020, 0, 0, 852021, 0, 0, 852022, 0, 0, 852023, 0, 0, 852024, 0, 0, 852025, 0, 0, 852026, 0, 0, 852027, 0, 0, 852028, 0, 0, 852029, 0, 0, 852030, 0, 0, 852031, 0, 0, 852037, 0, 0, 852038, 0, 0, 852039, 0, 0, 852040, 0, 0, 852041, 0, 0, 852042, 0, 0, 852050, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917567, 0, 0, 917573, 0, 0, 917578, 0, 0, 917586, 0, 0, 983103, 0, 0, 983109, 0, 0, 983114, 0, 0, 983122, 0, 0, 1048639, 0, 0, 1048645, 0, 0, 1048649, 0, 0, 1048658, 0, 0, 1114175, 0, 0, 1114181, 0, 0, 1114185, 0, 0, 1114194, 0, 0, 1179711, 0, 0, 1179717, 0, 0, 1179721, 0, 0, 1179730, 0, 0, 1245247, 0, 0, 1245248, 0, 0, 1245249, 0, 0, 1245250, 0, 0, 1245251, 0, 0, 1245252, 0, 0, 1245253, 0, 0, 1245257, 0, 0, 1245266, 0, 0, 1310793, 0, 0, 1310802, 0, 0, 1376329, 0, 0, 1376338, 0, 0, 1441865, 0, 0, 1441874, 0, 0, 1507383, 0, 0, 1507387, 0, 0, 1507388, 0, 0, 1507389, 0, 0, 1507390, 0, 0, 1507391, 0, 0, 1507392, 0, 0, 1507393, 0, 0, 1507394, 0, 0, 1507395, 0, 0, 1507396, 0, 0, 1507397, 0, 0, 1507398, 0, 0, 1507399, 0, 0, 1507400, 0, 0, 1507401, 0, 0, 1507410, 0, 0, 1572919, 0, 0, 1572920, 0, 0, 1572921, 0, 0, 1572922, 0, 0, 1572946, 0, 0, 1638455, 0, 0, 1638482, 0, 0, 1703991, 0, 0, 1704018, 0, 0, 1769527, 0, 0, 1769554, 0, 0, 1835063, 0, 0, 1835090, 0, 0, 1900600, 0, 0, 1900601, 0, 0, 1900602, 0, 0, 1900603, 0, 0, 1900604, 0, 0, 1900605, 0, 0, 1900606, 0, 0, 1900607, 0, 0, 1900608, 0, 0, 1900609, 0, 0, 1900610, 0, 0, 1900611, 0, 0, 1900612, 0, 0, 1900613, 0, 0, 1900614, 0, 0, 1900615, 0, 0, 1900616, 0, 0, 1900617, 0, 0, 1900618, 0, 0, 1900619, 0, 0, 1900620, 0, 0, 1900621, 0, 0, 1900622, 0, 0, 1900623, 0, 0, 1900624, 0, 0, 1900625, 0, 0, 1900626, 0, 0 )
 _sections_unfolded = [ "Cell" ]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Node" index="1"]
-
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 0.2, 0.3 )
-transform = Transform2D( 0.2, 0, 0, 0.3, 0, 0 )
-
-[node name="Barra_vomito" type="AnimatedSprite" parent="Node/CanvasLayer" index="0"]
-
-position = Vector2( 230.689, 869.592 )
-scale = Vector2( 0.537929, 1.04354 )
-frames = SubResource( 1 )
-animation = "lleno"
-_sections_unfolded = [ "Transform" ]
-
-[node name="Inventario" type="Sprite" parent="Node/CanvasLayer" index="1"]
-
-position = Vector2( 500, 2250 )
-scale = Vector2( 4.375, 2.66667 )
-texture = ExtResource( 5 )
-centered = false
-_sections_unfolded = [ "Offset" ]
 
 [node name="itemCambio" type="Node" parent="." index="1"]
 
@@ -141,7 +118,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_group_": true
@@ -165,7 +142,46 @@ position = Vector2( 1.38272, -0.249516 )
 scale = Vector2( 1.28321, 1.2962 )
 shape = SubResource( 3 )
 
-[node name="PJ" type="Node" parent="." index="2"]
+[node name="itemCambio2" type="Node" parent="." index="2"]
+
+[node name="item" type="Area2D" parent="itemCambio2" index="0" groups=[
+"accionables",
+]]
+
+position = Vector2( 323.484, 471.259 )
+scale = Vector2( 0.775809, 0.775809 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="spr_item" type="AnimatedSprite" parent="itemCambio2/item" index="0" groups=[
+"accionables",
+]]
+
+position = Vector2( -30.8732, -32.5055 )
+scale = Vector2( 1.28321, 1.2962 )
+frames = SubResource( 2 )
+animation = "cerrado"
+centered = false
+
+[node name="col_item" type="CollisionShape2D" parent="itemCambio2/item" index="1" groups=[
+"accionables",
+]]
+
+position = Vector2( 1.38272, -0.249516 )
+scale = Vector2( 1.28321, 1.2962 )
+shape = SubResource( 3 )
+
+[node name="PJ" type="Node" parent="." index="3"]
 
 [node name="kin_Pj" type="KinematicBody2D" parent="PJ" index="0" groups=[
 "player",
@@ -177,7 +193,7 @@ input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 9 )
+script = ExtResource( 5 )
 _sections_unfolded = [ "Collision", "Material", "Transform", "Visibility", "collision" ]
 __meta__ = {
 "_edit_group_": true
@@ -222,10 +238,57 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
+[node name="Node2" type="Node" parent="." index="4"]
+
+script = ExtResource( 9 )
+Mob = null
+
+[node name="TImer_Vomito" type="Timer" parent="Node2" index="0"]
+
+process_mode = 1
+wait_time = 5.0
+one_shot = false
+autostart = true
+
+[node name="HUD" type="CanvasLayer" parent="Node2" index="1"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 0.2, 0.3 )
+transform = Transform2D( 0.2, 0, 0, 0.3, 0, 0 )
+script = ExtResource( 10 )
+
+[node name="Barra_vomito" type="AnimatedSprite" parent="Node2/HUD" index="0"]
+
+position = Vector2( 230.689, 869.592 )
+scale = Vector2( 0.537929, 1.04354 )
+frames = SubResource( 1 )
+animation = "lleno"
+script = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Inventario" type="Sprite" parent="Node2/HUD" index="1"]
+
+position = Vector2( 500, 2250 )
+scale = Vector2( 4.375, 2.66667 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="Slot1" type="Sprite" parent="Node2/HUD" index="2"]
+
 [connection signal="body_entered" from="itemCambio/item" to="itemCambio/item" method="_on_Area2D_body_entered"]
 
 [connection signal="body_exited" from="itemCambio/item" to="itemCambio/item" method="_on_Area2D_body_exited"]
 
+[connection signal="body_entered" from="itemCambio2/item" to="itemCambio2/item" method="_on_Area2D_body_entered"]
+
+[connection signal="body_exited" from="itemCambio2/item" to="itemCambio2/item" method="_on_Area2D_body_exited"]
+
 [connection signal="accion" from="PJ/kin_Pj" to="itemCambio/item" method="_on_kin_Pj_accion"]
+
+[connection signal="accion" from="PJ/kin_Pj" to="itemCambio2/item" method="_on_kin_Pj_accion"]
+
+[connection signal="timeout" from="Node2/TImer_Vomito" to="Node2" method="_on_TImer_Vomito_timeout"]
 
 

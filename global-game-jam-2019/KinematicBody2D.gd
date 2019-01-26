@@ -9,6 +9,7 @@ var open_door = false
 var cont = 0
 var text_actual = null
 
+
 var distance = Vector2()
 var velocity = Vector2()
 var direction = Vector2()
