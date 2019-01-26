@@ -2,9 +2,9 @@
 
 [ext_resource path="res://alphaTest/my_tileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://alphaTest/PJ.tscn" type="PackedScene" id=2]
-[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=3]
+[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=3]
 [ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=4]
-[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=5]
+[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=5]
 [ext_resource path="res://imagesAlpha/inventario.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -12,7 +12,7 @@
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "lleno",
+"name": "medio",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
@@ -22,11 +22,11 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "medio",
+"name": "lleno",
 "speed": 5.0
 } ]
 
-[node name="Node" type="Node"]
+[node name="Node" type="Node" index="0"]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 
