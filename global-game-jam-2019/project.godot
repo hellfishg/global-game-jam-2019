@@ -27,6 +27,8 @@ joy_izq=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resourc
  ]
 joy_salto=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
  ]
+joy_accion=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
 
 [rendering]
 

@@ -13,6 +13,8 @@ var distance = Vector2()
 var velocity = Vector2()
 var direction = Vector2()
 
+signal accion
+
 func _ready():
 	set_physics_process(true)
 	set_process(true)
@@ -65,6 +67,27 @@ func _move(delta):
 	if get_col != null:
 		if get_col.normal == Vector2(0,1):
 			velocity.y = 0
+	
+
+			
+	#Crea señales accion:
+#	if Input.is_action_just_pressed("joy_accion"):
+#		print (str(get_node("../../itemCambio/item")))
+#		if get_node("../../itemCambio/item").tocado:
+#			emit_signal("accion")
+	if Input.is_action_just_pressed("joy_accion"):
+		emit_signal("accion")
+
+		
+		
+
+
+
+
+###################################
+
+
+
 #Daños:
 func damage():
 	if get_slide_collision(get_slide_count()-1) != null: 
@@ -79,3 +102,5 @@ func damage():
 func _on_exit_body_entered(body):
 	get_tree().change_scene("res://nivel2/Level_2.tscn")
 	
+
+

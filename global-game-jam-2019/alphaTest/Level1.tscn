@@ -7,7 +7,7 @@
 [ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=5]
 [ext_resource path="res://imagesAlpha/inventario.png" type="Texture" id=6]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=4]
 
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
@@ -63,7 +63,7 @@ transform = Transform2D( 0.2, 0, 0, 0.3, 0, 0 )
 
 position = Vector2( 230.689, 869.592 )
 scale = Vector2( 0.537929, 1.04354 )
-frames = SubResource( 1 )
+frames = SubResource( 4 )
 animation = "lleno"
 _sections_unfolded = [ "Transform" ]
 
