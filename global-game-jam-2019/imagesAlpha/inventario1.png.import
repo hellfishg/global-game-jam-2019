@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heladera1.png-ccb119e928f9a1726cce8cc8a3edf1ee.stex"
+path="res://.import/inventario1.png-4ea72f16005d1126cd963a7687b870d2.stex"
 
 [deps]
 
-source_file="res://imagesAlpha/heladera1.png"
-dest_files=[ "res://.import/heladera1.png-ccb119e928f9a1726cce8cc8a3edf1ee.stex" ]
+source_file="res://imagesAlpha/inventario1.png"
+dest_files=[ "res://.import/inventario1.png-4ea72f16005d1126cd963a7687b870d2.stex" ]
 
 [params]
 

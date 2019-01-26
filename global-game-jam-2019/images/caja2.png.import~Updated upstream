@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heladeraTilesetTest.png-57386f16045ace0cda5174df4b6b5dbb.stex"
+path="res://.import/caja2.png-dc469da612b9fa5f5280e3a767ceac91.stex"
 
 [deps]
 
-source_file="res://imagesAlpha/heladeraTilesetTest.png"
-dest_files=[ "res://.import/heladeraTilesetTest.png-57386f16045ace0cda5174df4b6b5dbb.stex" ]
+source_file="res://images/caja2.png"
+dest_files=[ "res://.import/caja2.png-dc469da612b9fa5f5280e3a767ceac91.stex" ]
 
 [params]
 
