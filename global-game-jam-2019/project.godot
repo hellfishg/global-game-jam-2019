@@ -13,6 +13,12 @@ config_version=3
 config/name="global-game-jam-2019"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1366
+window/size/height=768
+window/size/fullscreen=true
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
