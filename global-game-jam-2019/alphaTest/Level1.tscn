@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://alphaTest/my_tileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://alphaTest/PJ.tscn" type="PackedScene" id=2]
 [ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=3]
 [ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=4]
 [ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=5]
+[ext_resource path="res://imagesAlpha/inventario.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -58,11 +59,20 @@ rotation = 0.0
 scale = Vector2( 0.2, 0.3 )
 transform = Transform2D( 0.2, 0, 0, 0.3, 0, 0 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer" index="0"]
+[node name="Barra_vomito" type="AnimatedSprite" parent="CanvasLayer" index="0"]
 
-position = Vector2( 6300, 550 )
+position = Vector2( 230.689, 869.592 )
+scale = Vector2( 0.537929, 1.04354 )
 frames = SubResource( 1 )
 animation = "lleno"
+_sections_unfolded = [ "Transform" ]
+
+[node name="Inventario" type="Sprite" parent="CanvasLayer" index="1"]
+
+position = Vector2( 500, 2250 )
+scale = Vector2( 4.375, 2.66667 )
+texture = ExtResource( 6 )
 centered = false
+_sections_unfolded = [ "Offset" ]
 
 
