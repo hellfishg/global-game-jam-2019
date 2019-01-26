@@ -19,6 +19,15 @@ window/size/width=1366
 window/size/height=768
 window/size/fullscreen=true
 
+[input]
+
+joy_der=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+ ]
+joy_izq=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+ ]
+joy_salto=[ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
