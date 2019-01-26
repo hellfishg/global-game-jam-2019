@@ -2,6 +2,7 @@
 Juego hecho en python para la global game jam UTN 2019
 
 Temas investigar.
++ Tileset a Tilemap, en escala grande.
 + Manejo de timer.
 + Movimientos gravedad, estructura de personaje.
 + Barra de pis. tipo liquido. mostrado en la pantalla.
