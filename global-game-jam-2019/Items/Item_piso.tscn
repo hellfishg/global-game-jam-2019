@@ -1,0 +1,78 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Item_piso.gd" type="Script" id=1]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada3.png" type="Texture" id=2]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada.png" type="Texture" id=3]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada2.png" type="Texture" id=4]
+[ext_resource path="res://images/lootLlaveCrowbar3.png" type="Texture" id=5]
+[ext_resource path="res://images/lootLlaveCrowbar1.png" type="Texture" id=6]
+[ext_resource path="res://images/lootLlaveCrowbar2.png" type="Texture" id=7]
+[ext_resource path="res://images/lootLlave1.png" type="Texture" id=8]
+[ext_resource path="res://images/lootLlave3.png" type="Texture" id=9]
+[ext_resource path="res://images/lootLlave2.png" type="Texture" id=10]
+[ext_resource path="res://images/lootLlaveRoca3.png" type="Texture" id=11]
+[ext_resource path="res://images/lootLlaveRoca.png" type="Texture" id=12]
+[ext_resource path="res://images/lootLlaveRoca2.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "clip",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "crowbar",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "llave",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "roca",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.4264, 26.0299 )
+
+[node name="Item_piso" type="Area2D"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+item = null
+vivo = null
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+frames = SubResource( 1 )
+animation = "crowbar"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -1.95071, -1.95071 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Item_piso_body_entered"]
+
+[connection signal="body_exited" from="." to="." method="_on_Item_piso_body_exited"]
+
+

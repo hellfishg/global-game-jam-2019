@@ -14,13 +14,13 @@ func _process(delta):
 	pass
 	
 
-func _on_Area2D_body_entered(body):
+func _on_Contenedor_body_entered(body):
 	if body.is_in_group("player"):
 		tocado = true
 		pj = body
 		print("tocado")
 
-func _on_Area2D_body_exited(body):
+func _on_Contenedor_body_exited(body):
 	tocado = false
 	print("no_tocado")
 
@@ -35,15 +35,12 @@ func _on_kin_Pj_accion():
 				pj.inv_slot[i] = item
 				vivo = false
 				lleno = false
-				$spr_item.animation = "abierto"
 				break
 		
 		#no tiene espacio y es botella:
 		if item == "botella" && lleno:
 			#toma alcohol
 			print("toma alcohol!!")
-			$spr_item.animation = "abierto"
 		
 		print(pj.inv_slot)
-		
 		

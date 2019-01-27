@@ -13,6 +13,10 @@ config_version=3
 config/name="global-game-jam-2019"
 config/icon="res://icon.png"
 
+[autoload]
+
+globlal="*res://alphaTest/scriptGlobal.gd"
+
 [display]
 
 window/size/width=1366

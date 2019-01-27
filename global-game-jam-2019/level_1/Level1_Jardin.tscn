@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://tilsets/Tilset.tres" type="TileSet" id=1]
+[ext_resource path="res://player/Kin_Pj.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/Contenedor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/Item_piso.tscn" type="PackedScene" id=5]
+
+[node name="Level1_Jardin" type="Node" index="0"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 655360, 1, 0, 655361, 0, 0, 655362, 0, 0, 655363, 1, 0, 655369, 2, 0, 655370, 2, 0, 655371, 2, 0, 655372, 2, 0, 655373, 2, 0, 655374, 2, 0, 655375, 2, 0, 655376, 2, 0, 917504, 0, 0, 917505, 1, 0, 917506, 0, 0, 917507, 0, 0, 917508, 1, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 1, 0, 917513, 0, 0, 917514, 0, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Kin_Pj" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 295.717, 552.892 )
+
+[node name="Botella" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 478.33, 473.486 )
+
+[node name="Contenedor" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 316.756, 325.351 )
+
+[node name="Item_piso" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 229.587, 316.756 )
+
+

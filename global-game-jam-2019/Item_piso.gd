@@ -13,14 +13,14 @@ func _process(delta):
 	pass
 	
 
-func _on_area_itemSw_body_entered(body):
+func _on_Item_piso_body_entered(body):
 	if body.is_in_group("player"):
 		tocado = true
 		pj = body
 		print ("toca")
 
 
-func _on_area_itemSw_body_exited(body):
+func _on_Item_piso_body_exited(body):
 	tocado = false
 	print ("no-toca")
 
@@ -49,3 +49,4 @@ func _on_kin_Pj_accion():
 			#cambiar imagen del item nuevo!!
 			print(pj.inv_slot)
 		
+

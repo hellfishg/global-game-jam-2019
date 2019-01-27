@@ -2,24 +2,24 @@
 
 [ext_resource path="res://alphaTest/my_tileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://alphaTest/Area2D.gd" type="Script" id=2]
-[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=3]
-[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=4]
+[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=3]
+[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=4]
 [ext_resource path="res://alphaTest/area_itemSw.gd" type="Script" id=5]
 [ext_resource path="res://imagesAlpha/50x50.png" type="Texture" id=6]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=7]
-[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=8]
-[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=9]
-[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=10]
+[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=8]
+[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=9]
+[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=10]
 [ext_resource path="res://alphaTest/Level1.gd" type="Script" id=11]
 [ext_resource path="res://alphaTest/CanvasLayer.gd" type="Script" id=12]
 [ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=13]
-[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=14]
-[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=15]
+[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=14]
+[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=15]
 [ext_resource path="res://alphaTest/Barra_vomito.gd" type="Script" id=16]
-[ext_resource path="res://imagesAlpha/inventario2.png" type="Texture" id=17]
-[ext_resource path="res://imagesAlpha/inventario1.png" type="Texture" id=18]
-[ext_resource path="res://imagesAlpha/inventario4.png" type="Texture" id=19]
-[ext_resource path="res://imagesAlpha/inventario3.png" type="Texture" id=20]
+[ext_resource path="res://imagesAlpha/inventario4.png" type="Texture" id=17]
+[ext_resource path="res://imagesAlpha/inventario3.png" type="Texture" id=18]
+[ext_resource path="res://imagesAlpha/inventario1.png" type="Texture" id=19]
+[ext_resource path="res://imagesAlpha/inventario2.png" type="Texture" id=20]
 [ext_resource path="res://alphaTest/area_botella.gd" type="Script" id=21]
 [ext_resource path="res://imagesAlpha/botella.png" type="Texture" id=22]
 [ext_resource path="res://imagesAlpha/inventarioVacio.png" type="Texture" id=23]
@@ -33,12 +33,12 @@
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "abierto",
+"name": "cerrado",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "cerrado",
+"name": "abierto",
 "speed": 5.0
 } ]
 
@@ -50,14 +50,14 @@ extents = Vector2( 23.8599, 23.705 )
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "palanca",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "llave",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "palanca",
 "speed": 5.0
 } ]
 
@@ -76,17 +76,17 @@ extents = Vector2( 10, 10 )
 animations = [ {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "mover",
+"name": "salto",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "salto",
+"name": "frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "frente",
+"name": "mover",
 "speed": 5.0
 } ]
 
@@ -100,12 +100,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "medio",
+"name": "vacio",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
-"name": "vacio",
+"name": "medio",
 "speed": 5.0
 } ]
 
@@ -114,22 +114,22 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 17 ) ],
 "loop": true,
-"name": "1",
+"name": "3",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
-"name": "0",
+"name": "2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ) ],
 "loop": true,
-"name": "3",
+"name": "0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "2",
+"name": "1",
 "speed": 5.0
 } ]
 
@@ -166,7 +166,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 36.2928, 43.4286 )
 
-[node name="Level2" type="Node"]
+[node name="Level2" type="Node" index="1"]
 
 [node name="Node" type="Node" parent="." index="0"]
 
@@ -216,7 +216,7 @@ __meta__ = {
 "_edit_group_": true
 }
 item = "llave"
-vivo = true
+vivo = false
 
 [node name="spr_item" type="AnimatedSprite" parent="itemCambio/item" index="0" groups=[
 "accionables",
@@ -225,7 +225,7 @@ vivo = true
 position = Vector2( -30.8732, -32.5055 )
 scale = Vector2( 1.28321, 1.2962 )
 frames = SubResource( 1 )
-animation = "cerrado"
+animation = "abierto"
 centered = false
 
 [node name="col_item" type="CollisionShape2D" parent="itemCambio/item" index="1" groups=[
@@ -237,6 +237,8 @@ scale = Vector2( 1.28321, 1.2962 )
 shape = SubResource( 2 )
 
 [node name="itemCambio2" type="Node" parent="." index="2"]
+
+editor/display_folded = true
 
 [node name="item" type="Area2D" parent="itemCambio2" index="0" groups=[
 "accionables",
@@ -279,6 +281,8 @@ shape = SubResource( 2 )
 
 [node name="item_swch" type="Node" parent="." index="3"]
 
+editor/display_folded = true
+
 [node name="area_itemSw" type="Area2D" parent="item_swch" index="0"]
 
 position = Vector2( 503.873, 622.221 )
@@ -312,7 +316,7 @@ shape = SubResource( 4 )
 "player",
 ]]
 
-position = Vector2( 395.544, 401.89 )
+position = Vector2( 1200.7, 572.89 )
 scale = Vector2( 0.779433, 0.78241 )
 input_pickable = false
 collision_layer = 1
@@ -335,7 +339,7 @@ shape = SubResource( 5 )
 position = Vector2( -0.40387, 0.867371 )
 scale = Vector2( 1.28298, 1.2781 )
 frames = SubResource( 6 )
-animation = "mover"
+animation = "frente"
 
 [node name="Camera2D" type="Camera2D" parent="PJ/kin_Pj" index="2"]
 
@@ -374,7 +378,7 @@ Mob = null
 process_mode = 1
 wait_time = 5.0
 one_shot = false
-autostart = true
+autostart = false
 
 [node name="HUD" type="CanvasLayer" parent="Node2" index="1"]
 
@@ -390,7 +394,7 @@ script = ExtResource( 12 )
 position = Vector2( 230.689, 869.592 )
 scale = Vector2( 0.537929, 1.04354 )
 frames = SubResource( 7 )
-animation = "lleno"
+animation = "vacio"
 script = ExtResource( 16 )
 _sections_unfolded = [ "Transform" ]
 
@@ -404,6 +408,8 @@ frames = SubResource( 8 )
 animation = "0"
 
 [node name="item_recoger" type="Node" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="area_botella" type="StaticBody2D" parent="item_recoger" index="0" groups=[
 "items",
@@ -431,43 +437,11 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="col_botella" type="CollisionShape2D" parent="item_recoger/area_botella" index="1"]
 
-position = Vector2( -6.10352e-05, -2.14502 )
 shape = SubResource( 10 )
 
 [node name="item_recoger2" type="Node" parent="." index="7"]
 
 editor/display_folded = true
-
-[node name="area_botella" type="StaticBody2D" parent="item_recoger2" index="0" groups=[
-"items",
-]]
-
-position = Vector2( 774.537, 624.869 )
-scale = Vector2( 0.776654, 0.778668 )
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-script = ExtResource( 21 )
-_sections_unfolded = [ "Collision" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="spr_botella" type="AnimatedSprite" parent="item_recoger2/area_botella" index="0"]
-
-position = Vector2( -0.348538, 0.717993 )
-scale = Vector2( 1.24818, 1.26745 )
-frames = SubResource( 9 )
-animation = "lleno"
-_sections_unfolded = [ "Visibility" ]
-
-[node name="col_botella" type="CollisionShape2D" parent="item_recoger2/area_botella" index="1"]
-
-shape = SubResource( 10 )
 
 [node name="teleporter" type="Node" parent="." index="8"]
 
@@ -487,7 +461,7 @@ __meta__ = {
 }
 item1 = "llave"
 item2 = "ganzua"
-cerrado = "true"
+cerrado = "false"
 
 [node name="spr_teleport" type="AnimatedSprite" parent="teleporter/Are_teleport" index="0"]
 
@@ -514,13 +488,13 @@ shape = SubResource( 12 )
 
 [connection signal="body_exited" from="item_swch/area_itemSw" to="item_swch/area_itemSw" method="_on_area_itemSw_body_exited"]
 
-[connection signal="accion" from="PJ/kin_Pj" to="itemCambio/item" method="_on_kin_Pj_accion"]
-
 [connection signal="accion" from="PJ/kin_Pj" to="itemCambio2/item" method="_on_kin_Pj_accion"]
 
 [connection signal="accion" from="PJ/kin_Pj" to="item_swch/area_itemSw" method="_on_kin_Pj_accion"]
 
 [connection signal="accion" from="PJ/kin_Pj" to="teleporter/Are_teleport" method="_on_kin_Pj_accion"]
+
+[connection signal="accion" from="PJ/kin_Pj" to="itemCambio/item" method="_on_kin_Pj_accion"]
 
 [connection signal="timeout" from="Node2/TImer_Vomito" to="Node2" method="_on_TImer_Vomito_timeout"]
 
