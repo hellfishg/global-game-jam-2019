@@ -1,8 +1,6 @@
 extends Area2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var item = "llave"
 var tocado = false
 
 func _ready():
@@ -17,6 +15,8 @@ func _process(delta):
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("player"):
 		tocado = true
+		body.inv_slot[body.inv_puntero] = item
+		print(body.inv_slot)
 		print("tocado")
 
 

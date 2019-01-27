@@ -16,13 +16,16 @@ var direction = Vector2()
 
 signal accion
 
+var inv_puntero = 0
+var inv_slot = ["vacio", "vacio","vacio","vacio"]
+
 func _ready():
 	set_physics_process(true)
 	set_process(true)
 	
 func _physics_process(delta):
 	_move(delta)
-	damage()
+	#damage()
 
 func _move(delta):
 	#direction.x = int(Input.is_action_pressed("move_der"))-int(Input.is_action_pressed("move_izq"))
@@ -76,32 +79,60 @@ func _move(delta):
 #		print (str(get_node("../../itemCambio/item")))
 #		if get_node("../../itemCambio/item").tocado:
 #			emit_signal("accion")
+
 	if Input.is_action_just_pressed("joy_accion"):
 		emit_signal("accion")
-
 		
+	if Input.is_action_just_pressed("joy_inv_der"):
+		if inv_puntero < 3:
+			inv_puntero += 1
+		else:
+			inv_puntero = 0
+		get_node("../../Node2/HUD/AnimatedSprite").animation = str(inv_puntero)
+
+	if Input.is_action_just_pressed("joy_inv_izq"):
+		if inv_puntero > 0:
+			inv_puntero -= 1
+		else:
+			inv_puntero = 3
+		get_node("../../Node2/HUD/AnimatedSprite").animation = str(inv_puntero)
+
+	if Input.is_action_just_pressed("joy_seleccion"):
+		pass
+
+	#chequea si la colicion es un "items" y actua en consecuencia.
+	if get_col != null:
+		if get_col.collider.is_in_group("items"):
+			var item = get_col.collider.item
+			
+			if item == "botella":
+				get_col.collider.queue_free()
+				inv_slot[inv_puntero] = item
+				print(inv_slot)
+			
+			
 		
-
-
-
 
 ###################################
 
 
 
-#Daños:
-func damage():
-	if get_slide_collision(get_slide_count()-1) != null: 
-		var get_col = get_slide_collision(get_slide_count()-1)
-		if get_col.collider.is_in_group("pichos"):
-			print("auuchhh")
-			
+##Daños:
+#func damage():
+#	if get_slide_collision(get_slide_count()-1) != null: 
+#		var get_col = get_slide_collision(get_slide_count()-1)
+#		if get_col.collider.is_in_group("pichos"):
+#			print("auuchhh")
+#
+#
+#
+#
+##salida al nivel 2:
+#func _on_exit_body_entered(body):
+#	get_tree().change_scene("res://nivel2/Level_2.tscn")
 	
 
 
-#salida al nivel 2:
-func _on_exit_body_entered(body):
-	get_tree().change_scene("res://nivel2/Level_2.tscn")
-	
+
 
 

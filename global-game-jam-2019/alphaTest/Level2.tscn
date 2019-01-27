@@ -1,75 +1,81 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://alphaTest/my_tileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://alphaTest/Area2D.gd" type="Script" id=2]
-[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=3]
-[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=4]
+[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=3]
+[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=4]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=5]
-[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=6]
-[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=7]
-[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=8]
+[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=6]
+[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=7]
+[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=8]
 [ext_resource path="res://alphaTest/Level1.gd" type="Script" id=9]
 [ext_resource path="res://alphaTest/CanvasLayer.gd" type="Script" id=10]
-[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=11]
-[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=12]
+[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=11]
+[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=12]
 [ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=13]
 [ext_resource path="res://alphaTest/Barra_vomito.gd" type="Script" id=14]
-[ext_resource path="res://imagesAlpha/inventario.png" type="Texture" id=15]
-
-[sub_resource type="SpriteFrames" id=2]
-
-animations = [ {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "cerrado",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "abierto",
-"speed": 5.0
-} ]
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 23.8599, 23.705 )
-
-[sub_resource type="RectangleShape2D" id=4]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="SpriteFrames" id=5]
-
-animations = [ {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "salto",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ) ],
-"loop": true,
-"name": "mover",
-"speed": 5.0
-} ]
+[ext_resource path="res://imagesAlpha/inventario4.png" type="Texture" id=15]
+[ext_resource path="res://imagesAlpha/inventario2.png" type="Texture" id=16]
+[ext_resource path="res://imagesAlpha/inventario3.png" type="Texture" id=17]
+[ext_resource path="res://imagesAlpha/inventario1.png" type="Texture" id=18]
+[ext_resource path="res://alphaTest/area_botella.gd" type="Script" id=19]
+[ext_resource path="res://imagesAlpha/botella.png" type="Texture" id=20]
+[ext_resource path="res://imagesAlpha/inventarioVacio.png" type="Texture" id=21]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "abierto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "cerrado",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 23.8599, 23.705 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="SpriteFrames" id=4]
+
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "mover",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "salto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "frente",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
 "frames": [ ExtResource( 11 ) ],
 "loop": true,
-"name": "lleno",
+"name": "medio",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
-"name": "medio",
+"name": "lleno",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ) ],
@@ -78,9 +84,54 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "lleno",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "vacio",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 31.2319, 32.0932 )
+
 [node name="Level2" type="Node" index="0"]
 
 [node name="Node" type="Node" parent="." index="0"]
+
+editor/display_folded = true
 
 [node name="TileMap" type="TileMap" parent="Node" index="0"]
 
@@ -104,6 +155,8 @@ tile_data = PoolIntArray( -131071, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 
 _sections_unfolded = [ "Cell" ]
 
 [node name="itemCambio" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="item" type="Area2D" parent="itemCambio" index="0" groups=[
 "accionables",
@@ -130,7 +183,7 @@ __meta__ = {
 
 position = Vector2( -30.8732, -32.5055 )
 scale = Vector2( 1.28321, 1.2962 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "cerrado"
 centered = false
 
@@ -140,7 +193,7 @@ centered = false
 
 position = Vector2( 1.38272, -0.249516 )
 scale = Vector2( 1.28321, 1.2962 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="itemCambio2" type="Node" parent="." index="2"]
 
@@ -158,7 +211,7 @@ angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Visibility" ]
 __meta__ = {
 "_edit_group_": true
 }
@@ -169,7 +222,7 @@ __meta__ = {
 
 position = Vector2( -30.8732, -32.5055 )
 scale = Vector2( 1.28321, 1.2962 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "cerrado"
 centered = false
 
@@ -179,7 +232,7 @@ centered = false
 
 position = Vector2( 1.38272, -0.249516 )
 scale = Vector2( 1.28321, 1.2962 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="PJ" type="Node" parent="." index="3"]
 
@@ -203,13 +256,13 @@ __meta__ = {
 
 position = Vector2( 0.184937, -18.6729 )
 scale = Vector2( 2.50739, 1.64822 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="spr_Pj" type="AnimatedSprite" parent="PJ/kin_Pj" index="1"]
 
 position = Vector2( -0.40387, 0.867371 )
 scale = Vector2( 1.28298, 1.2781 )
-frames = SubResource( 5 )
+frames = SubResource( 4 )
 animation = "mover"
 
 [node name="Camera2D" type="Camera2D" parent="PJ/kin_Pj" index="2"]
@@ -240,6 +293,7 @@ editor_draw_drag_margin = false
 
 [node name="Node2" type="Node" parent="." index="4"]
 
+editor/display_folded = true
 script = ExtResource( 9 )
 Mob = null
 
@@ -252,6 +306,7 @@ autostart = true
 
 [node name="HUD" type="CanvasLayer" parent="Node2" index="1"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -263,19 +318,49 @@ script = ExtResource( 10 )
 
 position = Vector2( 230.689, 869.592 )
 scale = Vector2( 0.537929, 1.04354 )
-frames = SubResource( 1 )
+frames = SubResource( 5 )
 animation = "lleno"
 script = ExtResource( 14 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Inventario" type="Sprite" parent="Node2/HUD" index="1"]
+[node name="Slot1" type="Sprite" parent="Node2/HUD" index="1"]
 
-position = Vector2( 500, 2250 )
-scale = Vector2( 4.375, 2.66667 )
-texture = ExtResource( 15 )
-centered = false
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node2/HUD" index="2"]
 
-[node name="Slot1" type="Sprite" parent="Node2/HUD" index="2"]
+position = Vector2( 1633.35, 2313.23 )
+scale = Vector2( 6.1563, 3.1742 )
+frames = SubResource( 6 )
+animation = "0"
+
+[node name="item_recoger" type="Node" parent="." index="5"]
+
+[node name="area_botella" type="StaticBody2D" parent="item_recoger" index="0" groups=[
+"items",
+]]
+
+position = Vector2( 676.165, 623.967 )
+scale = Vector2( 0.776654, 0.778668 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 19 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="spr_botella" type="AnimatedSprite" parent="item_recoger/area_botella" index="0"]
+
+position = Vector2( -0.348538, 0.717993 )
+scale = Vector2( 1.24818, 1.26745 )
+frames = SubResource( 7 )
+animation = "lleno"
+_sections_unfolded = [ "Visibility" ]
+
+[node name="col_botella" type="CollisionShape2D" parent="item_recoger/area_botella" index="1"]
+
+shape = SubResource( 8 )
 
 [connection signal="body_entered" from="itemCambio/item" to="itemCambio/item" method="_on_Area2D_body_entered"]
 
