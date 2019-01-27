@@ -17,7 +17,9 @@ var direction = Vector2()
 signal accion
 
 var inv_puntero = 0
-var inv_slot = ["vacio", "vacio","vacio","vacio"]
+#var inv_slot = ["vacio", "vacio","vacio","vacio"]
+var inv_slot = ["matafuego", "culo","llave","perro"] #testharkorded
+
 
 func _ready():
 	set_physics_process(true)
@@ -106,9 +108,24 @@ func _move(delta):
 			var item = get_col.collider.item
 			
 			if item == "botella":
+				var lleno = true
 				get_col.collider.queue_free()
-				inv_slot[inv_puntero] = item
+				
+				for i in range(4):
+					if inv_slot[i] == "vacio":
+						inv_slot[i] = item
+						lleno = false
+						break
+				
+				if lleno:
+					#tomar alcohol,timer etc.
+					print("toma botella!!")
+					
+					
 				print(inv_slot)
+					
+						
+
 			
 			
 		
