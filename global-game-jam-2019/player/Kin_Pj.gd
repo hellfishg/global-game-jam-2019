@@ -1,4 +1,4 @@
-extends KinematicBody2D
+
 
 var speed = 350
 var jump_speed = 900
@@ -130,41 +130,28 @@ func _move(delta):
 					
 				print(inv_slot)
 
+#	actuliazar_menu()
+#
+#func actuliazar_menu():
+# 	get_node("../Barras/CanvasLayer/item1").animation = inv_slot[0]
+#	get_node("../Barras/CanvasLayer/item2").animation = inv_slot[1]
+#	get_node("../Barras/CanvasLayer/item3").animation = inv_slot[2]
+#	get_node("../Barras/CanvasLayer/item4").animation = inv_slot[3]
+#
+#
+#
+#
 	actuliazar_menu()
 						
 func actuliazar_menu():
-	
-	$Barras/CanvasLayer/item1.animation = inv_slot[0]
-	$Barras/CanvasLayer/item2.animation = inv_slot[1]
-	$Barras/CanvasLayer/item3.animation = inv_slot[2]
-	$Barras/CanvasLayer/item4.animation = inv_slot[3]
-	
-	
-#	get_node("Kin_Pj/Barras/CanvasLayer/item1").animation = inv_slot[0]
-#	get_node("/Barras/CanvasLayer/item2").animation = inv_slot[1]
-#	get_node("/Barras/CanvasLayer/item3").animation = inv_slot[2]
-#	get_node("/Barras/CanvasLayer/item4").animation = inv_slot[3]
+	get_node("../Barras/CanvasLayer/item1").animation = inv_slot[0]
+	get_node("../Barras/CanvasLayer/item2").animation = inv_slot[1]
+	get_node("../Barras/CanvasLayer/item3").animation = inv_slot[2]
+	get_node("../Barras/CanvasLayer/item4").animation = inv_slot[3]
 	
 			
-func setearBarras():	
-	var pos = Vector2()
-	pos = self.position
-	
-<<<<<<< Updated upstream
-	pos.y = +700
-	pos.x = +180
-=======
-	pos.y = +100
-	pos.x = +150
->>>>>>> Stashed changes
-	
-	$Barras/CanvasLayer/indice.position = pos
-	
-	$Barras/CanvasLayer/item1.position = pos
-	$Barras/CanvasLayer/item2.position = pos
-	$Barras/CanvasLayer/item3.position = pos
-	$Barras/CanvasLayer/item4.position = pos
-	
+			
+		
 
 ###################################
 
