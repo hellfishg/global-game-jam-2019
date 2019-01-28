@@ -22,7 +22,7 @@ globlal="*res://alphaTest/scriptGlobal.gd"
 
 window/size/width=1366
 window/size/height=650
-window/size/fullscreen=true
+window/size/borderless=true
 
 [input]
 
