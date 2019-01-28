@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://tilsets/Tilset.tres" type="TileSet" id=1]
+[ext_resource path="res://player/Kin_Pj.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/Contenedor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/Item_piso.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Exits/Puerta.tscn" type="PackedScene" id=6]
+
+[node name="Level1_Jardin" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196618, 3, 0, 196619, 3, 0, 196620, 3, 0, 196621, 3, 0, 196622, 3, 0, 196623, 3, 0, 196624, 3, 0, 196625, 3, 0, 196626, 3, 0, 196627, 3, 0, 196628, 3, 0, 262164, 3, 0, 262165, 3, 0, 262166, 3, 0, 262167, 3, 0, 262168, 3, 0, 458753, 3, 0, 458754, 3, 0, 458755, 3, 0, 458756, 3, 0, 458757, 3, 0, 458758, 3, 0, 458759, 3, 0, 458760, 3, 0, 655360, 1, 0, 655361, 0, 0, 655362, 0, 0, 655363, 1, 0, 655369, 2, 0, 655370, 2, 0, 655371, 2, 0, 655372, 2, 0, 655373, 2, 0, 655374, 2, 0, 655375, 2, 0, 655376, 2, 0, 917504, 0, 0, 917505, 1, 0, 917506, 0, 0, 917507, 0, 0, 917508, 1, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 1, 0, 917513, 0, 0, 917514, 0, 0, 1114124, 2, 0, 1114125, 2, 0, 1114126, 2, 0, 1114127, 2, 0, 1114128, 2, 0, 1114129, 2, 0, 1114130, 2, 0, 1114131, 2, 0, 1114132, 2, 0, 1114133, 2, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="Kin_Pj" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 295.717, 552.892 )
+
+[node name="Botella" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 553.676, 114.483 )
+
+[node name="Botella2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 638.995, 117.807 )
+
+[node name="Botella3" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 714.341, 113.375 )
+
+[node name="Botella4" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 798.552, 111.159 )
+
+[node name="Contenedor" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 316.756, 325.351 )
+item = "llave"
+vivo = true
+
+[node name="Item_piso" parent="." index="7" instance=ExtResource( 5 )]
+
+position = Vector2( 229.587, 316.756 )
+item = "crowbar"
+vivo = true
+
+[node name="Puerta" parent="." index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 805.396, 449.352 )
+
+[connection signal="accion" from="Kin_Pj" to="Item_piso" method="_on_Kin_Pj_accion"]
+
+[connection signal="accion" from="Kin_Pj" to="Contenedor" method="_on_Kin_Pj_accion"]
+
+

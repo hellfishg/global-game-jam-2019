@@ -1,28 +1,28 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player/Kin_Pj.gd" type="Script" id=1]
-[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=2]
-[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=3]
-[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=4]
-[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=5]
-[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=6]
+[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=2]
+[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=3]
+[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=4]
+[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=5]
+[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "frente",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "mover",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "salto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "frente",
 "speed": 5.0
 } ]
 
@@ -31,17 +31,17 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 11.8708, 16.1753 )
 
-[node name="Kin_Pj" type="KinematicBody2D" index="0" groups=[
+[node name="Kin_Pj" type="KinematicBody2D" groups=[
 "player",
 ]]
 
 position = Vector2( 54.7762, 12.503 )
-scale = Vector2( 1.71011, 1.6526 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="spr_Pj" type="AnimatedSprite" parent="." index="0"]
 
@@ -51,17 +51,16 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="col_Pj" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -12.5837, -8.6048 )
-scale = Vector2( 0.151313, 0.780497 )
+position = Vector2( -17.0598, -16.8092 )
+scale = Vector2( 0.45231, 2.44334 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
-visible = false
-position = Vector2( -3.8147e-06, -0.19371 )
+position = Vector2( -3.8147e-06, 20.735 )
 anchor_mode = 1
 rotating = false
-current = false
+current = true
 zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000

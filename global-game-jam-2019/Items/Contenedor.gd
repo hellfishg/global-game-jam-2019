@@ -6,8 +6,6 @@ export (bool) var vivo
 var pj
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
 	pass
 
 func _process(delta):
@@ -24,7 +22,7 @@ func _on_Contenedor_body_exited(body):
 	tocado = false
 	print("no_tocado")
 
-func _on_kin_Pj_accion():
+func _on_Kin_Pj_accion():
 	if tocado && vivo:
 		#pasan 3: esp, no esp, botella, botella sin esp
 		var lleno = true
@@ -44,3 +42,6 @@ func _on_kin_Pj_accion():
 		
 		print(pj.inv_slot)
 		
+
+
+

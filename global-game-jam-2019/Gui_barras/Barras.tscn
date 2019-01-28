@@ -1,6 +1,87 @@
-[gd_scene format=2]
+[gd_scene load_steps=15 format=2]
 
-[node name="Barras" type="Node" index="0"]
+[ext_resource path="res://images/inventario2.png" type="Texture" id=1]
+[ext_resource path="res://images/inventario1.png" type="Texture" id=2]
+[ext_resource path="res://images/inventario3.png" type="Texture" id=3]
+[ext_resource path="res://images/inventario4.png" type="Texture" id=4]
+[ext_resource path="res://images/inventarioMoneda.png" type="Texture" id=5]
+[ext_resource path="res://images/inventarioVacio.png" type="Texture" id=6]
+[ext_resource path="res://images/inventarioCrowbar.png" type="Texture" id=7]
+[ext_resource path="res://images/inventarioLlave.png" type="Texture" id=8]
+[ext_resource path="res://images/inventarioRoca.png" type="Texture" id=9]
+[ext_resource path="res://images/inventarioBotella.png" type="Texture" id=10]
+[ext_resource path="res://images/inventarioGanzuaImprovisadapng.png" type="Texture" id=11]
+[ext_resource path="res://images/inventarioQueso.png" type="Texture" id=12]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "moneda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "vacio",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "crowbar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "llave",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "roca",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "botella",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "ganzua",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "queso",
+"speed": 5.0
+} ]
+
+[node name="Barras" type="Node"]
 
 [node name="Timer" type="Timer" parent="." index="0"]
 
@@ -16,5 +97,36 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="indice" type="AnimatedSprite" parent="CanvasLayer" index="0"]
+
+position = Vector2( 214.153, 587.526 )
+frames = SubResource( 5 )
+animation = "0"
+_sections_unfolded = [ "Transform" ]
+
+[node name="item1" type="AnimatedSprite" parent="CanvasLayer" index="1"]
+
+position = Vector2( 63.4687, 599.42 )
+frames = SubResource( 6 )
+animation = "botella"
+
+[node name="item2" type="AnimatedSprite" parent="CanvasLayer" index="2"]
+
+position = Vector2( 165.253, 595.718 )
+frames = SubResource( 6 )
+animation = "botella"
+
+[node name="item3" type="AnimatedSprite" parent="CanvasLayer" index="3"]
+
+position = Vector2( 262.823, 595.729 )
+frames = SubResource( 6 )
+animation = "botella"
+
+[node name="item4" type="AnimatedSprite" parent="CanvasLayer" index="4"]
+
+position = Vector2( 360.563, 595.528 )
+frames = SubResource( 6 )
+animation = "botella"
 
 

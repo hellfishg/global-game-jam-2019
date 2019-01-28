@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://images/pisoPatio1.jpg" type="Texture" id=1]
 [ext_resource path="res://images/pisoPatio2.jpg" type="Texture" id=2]
 [ext_resource path="res://images/pisoLiving.jpg" type="Texture" id=3]
 [ext_resource path="res://images/pisoCocina.jpg" type="Texture" id=4]
+[ext_resource path="res://images/caja1.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.346, 32 )
 
-[node name="Tileset" type="Node"]
+[node name="Tileset" type="Node" index="0"]
 
 [node name="Patio" type="Sprite" parent="." index="0"]
 
@@ -120,6 +121,34 @@ bounce = 0.0
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cocina/StaticBody2D" index="0"]
+
+position = Vector2( -0.34594, 0 )
+shape = SubResource( 1 )
+
+[node name="Cajas" type="Sprite" parent="." index="4"]
+
+position = Vector2( 400, 0 )
+texture = ExtResource( 5 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cajas" index="0"]
+
+position = Vector2( 25.3284, 25.0816 )
+scale = Vector2( 0.761737, 0.765855 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cajas/StaticBody2D" index="0"]
 
 position = Vector2( -0.34594, 0 )
 shape = SubResource( 1 )

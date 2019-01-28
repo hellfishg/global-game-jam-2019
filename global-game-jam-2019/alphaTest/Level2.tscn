@@ -2,27 +2,27 @@
 
 [ext_resource path="res://alphaTest/my_tileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://alphaTest/Area2D.gd" type="Script" id=2]
-[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=3]
-[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=4]
+[ext_resource path="res://imagesAlpha/cerrado.png" type="Texture" id=3]
+[ext_resource path="res://imagesAlpha/abierto.png" type="Texture" id=4]
 [ext_resource path="res://alphaTest/area_itemSw.gd" type="Script" id=5]
 [ext_resource path="res://imagesAlpha/50x50.png" type="Texture" id=6]
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=7]
-[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=8]
-[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=9]
-[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=10]
+[ext_resource path="res://imagesAlpha/jugadorSaltando.png" type="Texture" id=8]
+[ext_resource path="res://imagesAlpha/jugadorFrontal.png" type="Texture" id=9]
+[ext_resource path="res://imagesAlpha/jugadorLateral.png" type="Texture" id=10]
 [ext_resource path="res://alphaTest/Level1.gd" type="Script" id=11]
 [ext_resource path="res://alphaTest/CanvasLayer.gd" type="Script" id=12]
-[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=13]
-[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=14]
-[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=15]
+[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=13]
+[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=14]
+[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=15]
 [ext_resource path="res://alphaTest/Barra_vomito.gd" type="Script" id=16]
 [ext_resource path="res://imagesAlpha/inventario2.png" type="Texture" id=17]
 [ext_resource path="res://imagesAlpha/inventario1.png" type="Texture" id=18]
-[ext_resource path="res://imagesAlpha/inventario4.png" type="Texture" id=19]
-[ext_resource path="res://imagesAlpha/inventario3.png" type="Texture" id=20]
+[ext_resource path="res://imagesAlpha/inventario3.png" type="Texture" id=19]
+[ext_resource path="res://imagesAlpha/inventario4.png" type="Texture" id=20]
 [ext_resource path="res://alphaTest/area_botella.gd" type="Script" id=21]
-[ext_resource path="res://imagesAlpha/botella.png" type="Texture" id=22]
-[ext_resource path="res://imagesAlpha/inventarioVacio.png" type="Texture" id=23]
+[ext_resource path="res://imagesAlpha/inventarioVacio.png" type="Texture" id=22]
+[ext_resource path="res://imagesAlpha/botella.png" type="Texture" id=23]
 [ext_resource path="res://alphaTest/Are_teleport.gd" type="Script" id=24]
 [ext_resource path="res://imagesAlpha/beacon2.png" type="Texture" id=25]
 [ext_resource path="res://imagesAlpha/beacon3.png" type="Texture" id=26]
@@ -33,12 +33,12 @@
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
-"name": "abierto",
+"name": "cerrado",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "cerrado",
+"name": "abierto",
 "speed": 5.0
 } ]
 
@@ -50,7 +50,7 @@ extents = Vector2( 23.8599, 23.705 )
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "palanca",
 "speed": 5.0
@@ -76,17 +76,17 @@ extents = Vector2( 10, 10 )
 animations = [ {
 "frames": [ ExtResource( 8 ) ],
 "loop": true,
-"name": "mover",
+"name": "salto",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
-"name": "salto",
+"name": "frente",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "frente",
+"name": "mover",
 "speed": 5.0
 } ]
 
@@ -95,17 +95,17 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
-"name": "lleno",
+"name": "vacio",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "medio",
+"name": "lleno",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ) ],
 "loop": true,
-"name": "vacio",
+"name": "medio",
 "speed": 5.0
 } ]
 
@@ -124,12 +124,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 19 ) ],
 "loop": true,
-"name": "3",
+"name": "2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "2",
+"name": "3",
 "speed": 5.0
 } ]
 
@@ -138,12 +138,12 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 22 ) ],
 "loop": true,
-"name": "lleno",
+"name": "vacio",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "vacio",
+"name": "lleno",
 "speed": 5.0
 } ]
 
@@ -238,6 +238,8 @@ shape = SubResource( 2 )
 
 [node name="itemCambio2" type="Node" parent="." index="2"]
 
+editor/display_folded = true
+
 [node name="item" type="Area2D" parent="itemCambio2" index="0" groups=[
 "accionables",
 ]]
@@ -278,6 +280,8 @@ scale = Vector2( 1.28321, 1.2962 )
 shape = SubResource( 2 )
 
 [node name="item_swch" type="Node" parent="." index="3"]
+
+editor/display_folded = true
 
 [node name="area_itemSw" type="Area2D" parent="item_swch" index="0"]
 
@@ -365,7 +369,6 @@ editor_draw_drag_margin = false
 
 [node name="Node2" type="Node" parent="." index="5"]
 
-editor/display_folded = true
 script = ExtResource( 11 )
 Mob = null
 
@@ -404,6 +407,8 @@ frames = SubResource( 8 )
 animation = "0"
 
 [node name="item_recoger" type="Node" parent="." index="6"]
+
+editor/display_folded = true
 
 [node name="area_botella" type="StaticBody2D" parent="item_recoger" index="0" groups=[
 "items",
@@ -495,6 +500,7 @@ position = Vector2( -4.97485, -0.221924 )
 scale = Vector2( 0.469692, 0.611257 )
 frames = SubResource( 11 )
 animation = "default"
+frame = 3
 playing = true
 
 [node name="col_teleport" type="CollisionShape2D" parent="teleporter/Are_teleport" index="1"]
@@ -516,11 +522,11 @@ shape = SubResource( 12 )
 
 [connection signal="accion" from="PJ/kin_Pj" to="itemCambio/item" method="_on_kin_Pj_accion"]
 
-[connection signal="accion" from="PJ/kin_Pj" to="itemCambio2/item" method="_on_kin_Pj_accion"]
-
 [connection signal="accion" from="PJ/kin_Pj" to="item_swch/area_itemSw" method="_on_kin_Pj_accion"]
 
 [connection signal="accion" from="PJ/kin_Pj" to="teleporter/Are_teleport" method="_on_kin_Pj_accion"]
+
+[connection signal="accion" from="PJ/kin_Pj" to="itemCambio2/item" method="_on_kin_Pj_accion"]
 
 [connection signal="timeout" from="Node2/TImer_Vomito" to="Node2" method="_on_TImer_Vomito_timeout"]
 
