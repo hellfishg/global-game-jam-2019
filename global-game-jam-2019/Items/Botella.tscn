@@ -25,7 +25,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 24.2993, 23.3414 )
 
-[node name="Botella" type="StaticBody2D" groups=[
+[node name="Botella" type="StaticBody2D" index="0" groups=[
 "items",
 ]]
 
@@ -45,7 +45,6 @@ __meta__ = {
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

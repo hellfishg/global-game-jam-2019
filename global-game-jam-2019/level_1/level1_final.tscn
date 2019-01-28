@@ -379,6 +379,7 @@ vivo = null
 
 frames = SubResource( 3 )
 animation = "roca"
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Roca" index="1"]
