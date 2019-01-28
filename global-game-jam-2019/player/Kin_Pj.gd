@@ -4,11 +4,8 @@ var speed = 350
 var jump_speed = 900
 var gravity = 1300
 
-var swim = false
-var open_door = false
 var cont = 0
 var text_actual = null
-
 
 var distance = Vector2()
 var velocity = Vector2()
@@ -18,13 +15,12 @@ signal accion
 
 var inv_puntero = 0
 var inv_slot = ["vacio", "vacio","vacio","vacio"]
-#var inv_slot = ["matafuego", "culo","llave","perro"] #testharkorded
-#var inv_puntero = get_node("/root/globlal").inv_puntero
-#var inv_slot = get_node("/root/globlal").inv_slot
+var alcoholEnSangre = 0
 
 func _ready():
-	inv_puntero = get_node("/root/globlal").inv_puntero
-	inv_slot = get_node("/root/globlal").inv_slot
+	inv_puntero = get_node("/root/Global").inv_puntero
+	inv_slot = get_node("/root/Global").inv_slot
+	alcoholEnSangre = get_node("/root/Global").alcoholEnSangre
 	MenuPos()
 	
 	set_physics_process(true)
@@ -36,14 +32,14 @@ func _physics_process(delta):
 func _move(delta):
 	direction.x = int(Input.is_action_pressed("joy_der"))-int(Input.is_action_pressed("joy_izq"))
 	
-	if direction.y != 0 and swim == false:
+	if direction.y != 0:
 		$spr_Pj.animation = "salto"
 	
-	if direction.x != 0 and direction.y == 0 and swim == false and open_door == false:
+	if direction.x != 0 and direction.y == 0:
 		$spr_Pj.animation = "mover"
 		$spr_Pj.playing = true
 		
-	elif direction.x == 0 and direction.y == 0 and swim == false and open_door == false:
+	elif direction.x == 0 and direction.y == 0:
 		$spr_Pj.playing = false
 		$spr_Pj.animation = "frente"
 	
@@ -77,7 +73,13 @@ func _move(delta):
 		if get_col.normal == Vector2(0,1):
 			velocity.y = 0
 	
-
+	################################
+	
+	if Input.is_action_just_pressed("joy_seleccion"):
+		if inv_slot[inv_puntero] == "botella":
+			inv_slot[inv_puntero] = "vacio"
+			tomarAlcohol()
+			
 			
 	#Crea señales accion:
 #	if Input.is_action_just_pressed("joy_accion"):
@@ -122,8 +124,8 @@ func _move(delta):
 						break
 				
 				if lleno:
-					#tomar alcohol,timer etc.
-					print("toma botella!!")
+					#tomar alcohol
+					tomarAlcohol()
 					
 					
 				print(inv_slot)
@@ -147,6 +149,16 @@ func MenuPos():
 	$Barras/CanvasLayer/item2.position += posAct
 	$Barras/CanvasLayer/item3.position += posAct
 	$Barras/CanvasLayer/item4.position += posAct
+	
+	posAct = Vector2()
+	posAct.x = 1345
+	posAct.y = 300
+	
+	$Barras/CanvasLayer/BarraVomito.position += posAct
+	
+func tomarAlcohol():
+	alcoholEnSangre -= 1
+	print("toma botella!!")
 	
 
 ###################################
