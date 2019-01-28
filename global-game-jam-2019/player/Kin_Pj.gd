@@ -139,9 +139,8 @@ func actuliazar_menu():
 			
 func MenuPos():
 	var posAct = Vector2()
-	posAct = $Camera2D.position
-	posAct.x = -5
-	posAct.y += 280
+	posAct.x = 0
+	posAct.y = 670
 	
 	$Barras/CanvasLayer/indice.position += posAct
 	$Barras/CanvasLayer/item1.position += posAct
