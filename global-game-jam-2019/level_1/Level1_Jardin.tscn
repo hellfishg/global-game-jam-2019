@@ -101,6 +101,9 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 "loop": true,
 "name": "mover",
@@ -365,8 +368,11 @@ __meta__ = {
 ]]
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 position = Vector2( -132.628, 10.1081 )
 =======
+=======
+>>>>>>> Stashed changes
 editor/display_folded = true
 position = Vector2( -3120.97, -760.118 )
 >>>>>>> Stashed changes

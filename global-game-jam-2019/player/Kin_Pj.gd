@@ -150,8 +150,13 @@ func setearBarras():
 	var pos = Vector2()
 	pos = self.position
 	
+<<<<<<< Updated upstream
 	pos.y = +700
 	pos.x = +180
+=======
+	pos.y = +100
+	pos.x = +150
+>>>>>>> Stashed changes
 	
 	$Barras/CanvasLayer/indice.position = pos
 	
