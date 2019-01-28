@@ -17,39 +17,39 @@
 [ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Items/Contenedor.tscn" type="PackedScene" id=16]
 [ext_resource path="res://level_1/Duende.gd" type="Script" id=17]
-[ext_resource path="res://images/raton.png" type="Texture" id=18]
-[ext_resource path="res://images/mesada.png" type="Texture" id=19]
-[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=20]
-[ext_resource path="res://images/maceta.png" type="Texture" id=21]
+[ext_resource path="res://images/cofre.png" type="Texture" id=18]
+[ext_resource path="res://images/leprechaun.png" type="Texture" id=19]
+[ext_resource path="res://images/mesada.png" type="Texture" id=20]
+[ext_resource path="res://images/raton.png" type="Texture" id=21]
 [ext_resource path="res://images/armario.png" type="Texture" id=22]
-[ext_resource path="res://images/cofre.png" type="Texture" id=23]
-[ext_resource path="res://images/leprechaun.png" type="Texture" id=24]
+[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=23]
+[ext_resource path="res://images/maceta.png" type="Texture" id=24]
 [ext_resource path="res://images/heladeraAbajo.png" type="Texture" id=25]
 [ext_resource path="res://Item_piso.gd" type="Script" id=26]
 [ext_resource path="res://images/lootLlaveGanzuaImprovisada3.png" type="Texture" id=27]
 [ext_resource path="res://images/lootLlaveGanzuaImprovisada.png" type="Texture" id=28]
 [ext_resource path="res://images/lootLlaveGanzuaImprovisada2.png" type="Texture" id=29]
-[ext_resource path="res://images/lootLlaveCrowbar3.png" type="Texture" id=30]
-[ext_resource path="res://images/lootLlaveCrowbar1.png" type="Texture" id=31]
-[ext_resource path="res://images/lootLlaveCrowbar2.png" type="Texture" id=32]
+[ext_resource path="res://images/lootLlaveRoca3.png" type="Texture" id=30]
+[ext_resource path="res://images/lootLlaveRoca.png" type="Texture" id=31]
+[ext_resource path="res://images/lootLlaveRoca2.png" type="Texture" id=32]
 [ext_resource path="res://images/lootLlave1.png" type="Texture" id=33]
 [ext_resource path="res://images/lootLlave3.png" type="Texture" id=34]
 [ext_resource path="res://images/lootLlave2.png" type="Texture" id=35]
-[ext_resource path="res://images/lootLlaveRoca3.png" type="Texture" id=36]
-[ext_resource path="res://images/lootLlaveRoca.png" type="Texture" id=37]
-[ext_resource path="res://images/lootLlaveRoca2.png" type="Texture" id=38]
+[ext_resource path="res://images/lootLlaveCrowbar3.png" type="Texture" id=36]
+[ext_resource path="res://images/lootLlaveCrowbar1.png" type="Texture" id=37]
+[ext_resource path="res://images/lootLlaveCrowbar2.png" type="Texture" id=38]
 [ext_resource path="res://images/inventario2.png" type="Texture" id=39]
 [ext_resource path="res://images/inventario1.png" type="Texture" id=40]
 [ext_resource path="res://images/inventario4.png" type="Texture" id=41]
 [ext_resource path="res://images/inventario3.png" type="Texture" id=42]
-[ext_resource path="res://images/inventarioMoneda.png" type="Texture" id=43]
-[ext_resource path="res://images/inventarioBotella.png" type="Texture" id=44]
-[ext_resource path="res://images/inventarioGanzuaImprovisadapng.png" type="Texture" id=45]
-[ext_resource path="res://images/inventarioQueso.png" type="Texture" id=46]
-[ext_resource path="res://images/inventarioVacio.png" type="Texture" id=47]
-[ext_resource path="res://images/inventarioCrowbar.png" type="Texture" id=48]
-[ext_resource path="res://images/inventarioLlave.png" type="Texture" id=49]
-[ext_resource path="res://images/inventarioRoca.png" type="Texture" id=50]
+[ext_resource path="res://images/inventarioRoca.png" type="Texture" id=43]
+[ext_resource path="res://images/inventarioLlave.png" type="Texture" id=44]
+[ext_resource path="res://images/inventarioMoneda.png" type="Texture" id=45]
+[ext_resource path="res://images/inventarioCrowbar.png" type="Texture" id=46]
+[ext_resource path="res://images/inventarioBotella.png" type="Texture" id=47]
+[ext_resource path="res://images/inventarioGanzuaImprovisadapng.png" type="Texture" id=48]
+[ext_resource path="res://images/inventarioQueso.png" type="Texture" id=49]
+[ext_resource path="res://images/inventarioVacio.png" type="Texture" id=50]
 [ext_resource path="res://sfx/intromusic.wav" type="AudioStream" id=51]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -100,22 +100,22 @@ extents = Vector2( 11.8708, 16.1753 )
 animations = [ {
 "frames": [ ExtResource( 18 ) ],
 "loop": true,
-"name": "raton",
+"name": "cofre",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 19 ) ],
 "loop": true,
-"name": "mesada",
+"name": "duende",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "heladera_ar",
+"name": "mesada",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "maceta",
+"name": "raton",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ) ],
@@ -125,12 +125,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "cofre",
+"name": "heladera_ar",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ) ],
 "loop": true,
-"name": "duende",
+"name": "maceta",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ) ],
@@ -154,7 +154,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
 "loop": true,
-"name": "crowbar",
+"name": "roca",
 "speed": 2.0
 }, {
 "frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
@@ -164,7 +164,7 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
 "loop": true,
-"name": "roca",
+"name": "crowbar",
 "speed": 2.0
 } ]
 
@@ -202,42 +202,42 @@ animations = [ {
 animations = [ {
 "frames": [ ExtResource( 43 ) ],
 "loop": true,
-"name": "moneda",
+"name": "roca",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 44 ) ],
 "loop": true,
-"name": "botella",
+"name": "llave",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 45 ) ],
 "loop": true,
-"name": "ganzua",
+"name": "moneda",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 46 ) ],
 "loop": true,
-"name": "queso",
+"name": "crowbar",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 47 ) ],
 "loop": true,
-"name": "vacio",
+"name": "botella",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 48 ) ],
 "loop": true,
-"name": "crowbar",
+"name": "ganzua",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 49 ) ],
 "loop": true,
-"name": "llave",
+"name": "queso",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 50 ) ],
 "loop": true,
-"name": "roca",
+"name": "vacio",
 "speed": 5.0
 } ]
 
@@ -482,6 +482,7 @@ vivo = true
 
 frames = SubResource( 7 )
 animation = "roca"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Roca" index="1"]

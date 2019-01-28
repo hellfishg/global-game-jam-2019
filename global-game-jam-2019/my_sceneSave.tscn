@@ -1,57 +1,70 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://bgm/patio3.jpg" type="Texture" id=1]
 [ext_resource path="res://bgm/patio1.jpg" type="Texture" id=2]
 [ext_resource path="res://bgm/patio2.jpg" type="Texture" id=3]
 [ext_resource path="res://images/OPENING.jpg" type="Texture" id=4]
 [ext_resource path="res://Exits/Puerta.gd" type="Script" id=5]
-[ext_resource path="res://images/puertaCasa.png" type="Texture" id=6]
-[ext_resource path="res://images/puertaBaño.png" type="Texture" id=7]
+[ext_resource path="res://images/puertaBaño.png" type="Texture" id=6]
+[ext_resource path="res://images/puertaCasa.png" type="Texture" id=7]
 [ext_resource path="res://tilsets/Tilset.tres" type="TileSet" id=8]
 [ext_resource path="res://player/Kin_Pj.gd" type="Script" id=9]
-[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=10]
-[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=11]
-[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=12]
-[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=13]
-[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=14]
+[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=10]
+[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=11]
+[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=12]
+[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=13]
+[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=14]
 [ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Items/Botella.gd" type="Script" id=16]
 [ext_resource path="res://Items/Contenedor.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Items/Contenedor.gd" type="Script" id=18]
 [ext_resource path="res://level_1/Duende.gd" type="Script" id=19]
 [ext_resource path="res://images/heladeraAbajo.png" type="Texture" id=20]
-[ext_resource path="res://images/cofre.png" type="Texture" id=21]
-[ext_resource path="res://images/raton.png" type="Texture" id=22]
-[ext_resource path="res://images/leprechaun.png" type="Texture" id=23]
-[ext_resource path="res://images/armario.png" type="Texture" id=24]
-[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=25]
-[ext_resource path="res://images/maceta.png" type="Texture" id=26]
-[ext_resource path="res://images/mesada.png" type="Texture" id=27]
-[ext_resource path="res://images/inventario3.png" type="Texture" id=28]
-[ext_resource path="res://images/inventario1.png" type="Texture" id=29]
-[ext_resource path="res://images/inventario2.png" type="Texture" id=30]
-[ext_resource path="res://images/inventario4.png" type="Texture" id=31]
-[ext_resource path="res://images/inventarioRoca.png" type="Texture" id=32]
-[ext_resource path="res://images/inventarioLlave.png" type="Texture" id=33]
-[ext_resource path="res://images/inventarioVacio.png" type="Texture" id=34]
-[ext_resource path="res://images/inventarioCrowbar.png" type="Texture" id=35]
-[ext_resource path="res://images/inventarioMoneda.png" type="Texture" id=36]
-[ext_resource path="res://images/inventarioBotella.png" type="Texture" id=37]
-[ext_resource path="res://images/inventarioGanzuaImprovisadapng.png" type="Texture" id=38]
-[ext_resource path="res://images/inventarioQueso.png" type="Texture" id=39]
-[ext_resource path="res://sfx/intromusic.wav" type="AudioStream" id=40]
+[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=21]
+[ext_resource path="res://images/armario.png" type="Texture" id=22]
+[ext_resource path="res://images/mesada.png" type="Texture" id=23]
+[ext_resource path="res://images/cofre.png" type="Texture" id=24]
+[ext_resource path="res://images/raton.png" type="Texture" id=25]
+[ext_resource path="res://images/leprechaun.png" type="Texture" id=26]
+[ext_resource path="res://images/maceta.png" type="Texture" id=27]
+[ext_resource path="res://Item_piso.gd" type="Script" id=28]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada3.png" type="Texture" id=29]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada.png" type="Texture" id=30]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada2.png" type="Texture" id=31]
+[ext_resource path="res://images/lootLlaveCrowbar3.png" type="Texture" id=32]
+[ext_resource path="res://images/lootLlaveCrowbar1.png" type="Texture" id=33]
+[ext_resource path="res://images/lootLlaveCrowbar2.png" type="Texture" id=34]
+[ext_resource path="res://images/lootLlave1.png" type="Texture" id=35]
+[ext_resource path="res://images/lootLlave3.png" type="Texture" id=36]
+[ext_resource path="res://images/lootLlave2.png" type="Texture" id=37]
+[ext_resource path="res://images/lootLlaveRoca3.png" type="Texture" id=38]
+[ext_resource path="res://images/lootLlaveRoca.png" type="Texture" id=39]
+[ext_resource path="res://images/lootLlaveRoca2.png" type="Texture" id=40]
+[ext_resource path="res://images/inventario3.png" type="Texture" id=41]
+[ext_resource path="res://images/inventario4.png" type="Texture" id=42]
+[ext_resource path="res://images/inventario1.png" type="Texture" id=43]
+[ext_resource path="res://images/inventario2.png" type="Texture" id=44]
+[ext_resource path="res://images/inventarioCrowbar.png" type="Texture" id=45]
+[ext_resource path="res://images/inventarioLlave.png" type="Texture" id=46]
+[ext_resource path="res://images/inventarioMoneda.png" type="Texture" id=47]
+[ext_resource path="res://images/inventarioRoca.png" type="Texture" id=48]
+[ext_resource path="res://images/inventarioBotella.png" type="Texture" id=49]
+[ext_resource path="res://images/inventarioGanzuaImprovisadapng.png" type="Texture" id=50]
+[ext_resource path="res://images/inventarioQueso.png" type="Texture" id=51]
+[ext_resource path="res://images/inventarioVacio.png" type="Texture" id=52]
+[ext_resource path="res://sfx/intromusic.wav" type="AudioStream" id=53]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "puerta_casa",
+"name": "puerta_banio",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
-"name": "puerta_banio",
+"name": "puerta_casa",
 "speed": 5.0
 } ]
 
@@ -63,19 +76,19 @@ extents = Vector2( 26.1147, 51.4663 )
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 10 ) ],
 "loop": true,
-"name": "mover",
+"name": "salto",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ) ],
+"frames": [ ExtResource( 11 ) ],
 "loop": true,
 "name": "frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "salto",
+"name": "mover",
 "speed": 5.0
 } ]
 
@@ -94,37 +107,37 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "cofre",
+"name": "heladera_ar",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ) ],
 "loop": true,
-"name": "raton",
+"name": "armario",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
-"name": "duende",
+"name": "mesada",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 24 ) ],
 "loop": true,
-"name": "armario",
+"name": "cofre",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ) ],
 "loop": true,
-"name": "heladera_ar",
+"name": "raton",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
-"name": "maceta",
+"name": "duende",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 27 ) ],
 "loop": true,
-"name": "mesada",
+"name": "maceta",
 "speed": 5.0
 } ]
 
@@ -136,68 +149,97 @@ extents = Vector2( 26.7875, 21.7845 )
 [sub_resource type="SpriteFrames" id=7]
 
 animations = [ {
-"frames": [ ExtResource( 28 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "clip",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "crowbar",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "llave",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "roca",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.4264, 26.0299 )
+
+[sub_resource type="SpriteFrames" id=9]
+
+animations = [ {
+"frames": [ ExtResource( 41 ) ],
 "loop": true,
 "name": "2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 29 ) ],
+"frames": [ ExtResource( 42 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ) ],
 "loop": true,
 "name": "0",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 30 ) ],
+"frames": [ ExtResource( 44 ) ],
 "loop": true,
 "name": "1",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 31 ) ],
-"loop": true,
-"name": "3",
-"speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=10]
 
 animations = [ {
-"frames": [ ExtResource( 32 ) ],
-"loop": true,
-"name": "roca",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ) ],
-"loop": true,
-"name": "llave",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 34 ) ],
-"loop": true,
-"name": "vacio",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 35 ) ],
+"frames": [ ExtResource( 45 ) ],
 "loop": true,
 "name": "crowbar",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 36 ) ],
+"frames": [ ExtResource( 46 ) ],
+"loop": true,
+"name": "llave",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 47 ) ],
 "loop": true,
 "name": "moneda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 37 ) ],
+"frames": [ ExtResource( 48 ) ],
+"loop": true,
+"name": "roca",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
 "loop": true,
 "name": "botella",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 38 ) ],
+"frames": [ ExtResource( 50 ) ],
 "loop": true,
 "name": "ganzua",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 39 ) ],
+"frames": [ ExtResource( 51 ) ],
 "loop": true,
 "name": "queso",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "vacio",
 "speed": 5.0
 } ]
 
@@ -309,7 +351,7 @@ __meta__ = {
 "player",
 ]]
 
-position = Vector2( 531.347, 95.5214 )
+position = Vector2( 439.053, 345.208 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -323,9 +365,9 @@ __meta__ = {
 [node name="spr_Pj" type="AnimatedSprite" parent="Kin_Pj" index="0"]
 
 frames = SubResource( 3 )
-animation = "salto"
+animation = "mover"
+frame = 2
 playing = true
-flip_h = true
 _sections_unfolded = [ "Transform" ]
 
 [node name="col_Pj" type="CollisionShape2D" parent="Kin_Pj" index="1"]
@@ -394,7 +436,41 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Botella5" type="StaticBody2D" parent="." index="6" groups=[
+[node name="Botella3" type="StaticBody2D" parent="." index="6" groups=[
+"items",
+] instance=ExtResource( 15 )]
+
+position = Vector2( -1078.39, 104.102 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Botella4" type="StaticBody2D" parent="." index="7" groups=[
+"items",
+] instance=ExtResource( 15 )]
+
+position = Vector2( -1036.94, -483.127 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Botella5" type="StaticBody2D" parent="." index="8" groups=[
 "items",
 ] instance=ExtResource( 15 )]
 
@@ -411,7 +487,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Planta1" type="Area2D" parent="." index="7" instance=ExtResource( 17 )]
+[node name="Planta1" type="Area2D" parent="." index="9" instance=ExtResource( 17 )]
 
 position = Vector2( -528.141, -185.086 )
 input_pickable = true
@@ -426,9 +502,9 @@ __meta__ = {
 "_edit_group_": true
 }
 item = "llave"
-vivo = false
+vivo = true
 
-[node name="Planta3" type="Area2D" parent="." index="8" instance=ExtResource( 17 )]
+[node name="Planta3" type="Area2D" parent="." index="10" instance=ExtResource( 17 )]
 
 position = Vector2( -1675.53, 364.808 )
 input_pickable = true
@@ -445,7 +521,7 @@ __meta__ = {
 item = "botella"
 vivo = true
 
-[node name="Planta2" type="Area2D" parent="." index="9" instance=ExtResource( 17 )]
+[node name="Planta2" type="Area2D" parent="." index="11" instance=ExtResource( 17 )]
 
 position = Vector2( -868.268, -344.199 )
 input_pickable = true
@@ -460,9 +536,9 @@ __meta__ = {
 "_edit_group_": true
 }
 item = "botella"
-vivo = false
+vivo = true
 
-[node name="Duende" type="Area2D" parent="." index="10"]
+[node name="Duende" type="Area2D" parent="." index="12"]
 
 position = Vector2( -383.365, -799.257 )
 input_pickable = true
@@ -489,7 +565,37 @@ animation = "duende"
 position = Vector2( -0.315559, 4.73338 )
 shape = SubResource( 6 )
 
-[node name="Barras" type="Node" parent="." index="11"]
+[node name="Roca" type="Area2D" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( -327.822, -344.472 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 28 )
+__meta__ = {
+"_edit_group_": true
+}
+item = "roca"
+vivo = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Roca" index="0"]
+
+frames = SubResource( 7 )
+animation = "roca"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roca" index="1"]
+
+position = Vector2( -1.95071, -1.95071 )
+shape = SubResource( 8 )
+
+[node name="Barras" type="Node" parent="." index="14"]
 
 [node name="Timer" type="Timer" parent="Barras" index="0"]
 
@@ -509,37 +615,37 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 [node name="indice" type="AnimatedSprite" parent="Barras/CanvasLayer" index="0"]
 
 position = Vector2( 226.212, 679.474 )
-frames = SubResource( 7 )
+frames = SubResource( 9 )
 animation = "0"
 _sections_unfolded = [ "Transform" ]
 
 [node name="item1" type="AnimatedSprite" parent="Barras/CanvasLayer" index="1"]
 
 position = Vector2( 75.5274, 691.367 )
-frames = SubResource( 8 )
-animation = "botella"
+frames = SubResource( 10 )
+animation = "vacio"
 
 [node name="item2" type="AnimatedSprite" parent="Barras/CanvasLayer" index="2"]
 
 position = Vector2( 177.312, 687.666 )
-frames = SubResource( 8 )
-animation = "roca"
+frames = SubResource( 10 )
+animation = "vacio"
 
 [node name="item3" type="AnimatedSprite" parent="Barras/CanvasLayer" index="3"]
 
 position = Vector2( 274.882, 687.676 )
-frames = SubResource( 8 )
-animation = "botella"
+frames = SubResource( 10 )
+animation = "vacio"
 
 [node name="item4" type="AnimatedSprite" parent="Barras/CanvasLayer" index="4"]
 
 position = Vector2( 372.622, 687.476 )
-frames = SubResource( 8 )
-animation = "llave"
+frames = SubResource( 10 )
+animation = "vacio"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="12"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="15"]
 
-stream = ExtResource( 40 )
+stream = ExtResource( 53 )
 volume_db = 0.0
 pitch_scale = 1.0
 autoplay = true
@@ -560,6 +666,8 @@ area_mask = 1
 
 [connection signal="accion" from="Kin_Pj" to="Duende" method="_on_Kin_Pj_accion"]
 
+[connection signal="accion" from="Kin_Pj" to="Roca" method="_on_Kin_Pj_accion"]
+
 [connection signal="body_entered" from="Planta1" to="Planta1" method="_on_Contenedor_body_entered"]
 
 [connection signal="body_exited" from="Planta1" to="Planta1" method="_on_Contenedor_body_exited"]
@@ -575,5 +683,9 @@ area_mask = 1
 [connection signal="body_entered" from="Duende" to="Duende" method="_on_Contenedor_body_entered"]
 
 [connection signal="body_exited" from="Duende" to="Duende" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Roca" to="Roca" method="_on_Item_piso_body_entered"]
+
+[connection signal="body_exited" from="Roca" to="Roca" method="_on_Item_piso_body_exited"]
 
 
