@@ -1,4 +1,4 @@
-
+extends KinematicBody2D
 
 var speed = 350
 var jump_speed = 900
@@ -25,7 +25,7 @@ var inv_slot = ["vacio", "vacio","vacio","vacio"]
 func _ready():
 	inv_puntero = get_node("/root/globlal").inv_puntero
 	inv_slot = get_node("/root/globlal").inv_slot
-	setearBarras()
+	#setearBarras()
 	
 	set_physics_process(true)
 	set_process(true)
@@ -130,33 +130,18 @@ func _move(delta):
 					
 				print(inv_slot)
 
-#	actuliazar_menu()
-#
-#func actuliazar_menu():
-# 	get_node("../Barras/CanvasLayer/item1").animation = inv_slot[0]
-#	get_node("../Barras/CanvasLayer/item2").animation = inv_slot[1]
-#	get_node("../Barras/CanvasLayer/item3").animation = inv_slot[2]
-#	get_node("../Barras/CanvasLayer/item4").animation = inv_slot[3]
-#
-#
-#
-#
+
 	actuliazar_menu()
 						
 func actuliazar_menu():
-	get_node("../Barras/CanvasLayer/item1").animation = inv_slot[0]
-	get_node("../Barras/CanvasLayer/item2").animation = inv_slot[1]
-	get_node("../Barras/CanvasLayer/item3").animation = inv_slot[2]
-	get_node("../Barras/CanvasLayer/item4").animation = inv_slot[3]
-	
-			
+	$Barras/CanvasLayer/item1.animation = inv_slot[0]
+	$Barras/CanvasLayer/item2.animation = inv_slot[1]
+	$Barras/CanvasLayer/item3.animation = inv_slot[2]
+	$Barras/CanvasLayer/item4.animation = inv_slot[3]
 			
 		
 
 ###################################
-
-
-
 ##Daños:
 #func damage():
 #	if get_slide_collision(get_slide_count()-1) != null: 
