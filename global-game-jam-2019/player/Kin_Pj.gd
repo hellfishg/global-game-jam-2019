@@ -129,17 +129,17 @@ func _move(delta):
 					
 				print(inv_slot)
 
-	actuliazar_menu()
-						
-func actuliazar_menu():
-	get_node("../Barras/CanvasLayer/item1").animation = inv_slot[0]
-	get_node("../Barras/CanvasLayer/item2").animation = inv_slot[1]
-	get_node("../Barras/CanvasLayer/item3").animation = inv_slot[2]
-	get_node("../Barras/CanvasLayer/item4").animation = inv_slot[3]
-	
-			
-			
-		
+#	actuliazar_menu()
+#
+#func actuliazar_menu():
+# 	get_node("../Barras/CanvasLayer/item1").animation = inv_slot[0]
+#	get_node("../Barras/CanvasLayer/item2").animation = inv_slot[1]
+#	get_node("../Barras/CanvasLayer/item3").animation = inv_slot[2]
+#	get_node("../Barras/CanvasLayer/item4").animation = inv_slot[3]
+#
+#
+#
+#
 
 ###################################
 
