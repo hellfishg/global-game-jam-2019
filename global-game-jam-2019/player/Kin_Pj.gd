@@ -25,17 +25,15 @@ var inv_slot = ["vacio", "vacio","vacio","vacio"]
 func _ready():
 	inv_puntero = get_node("/root/globlal").inv_puntero
 	inv_slot = get_node("/root/globlal").inv_slot
-	#setearBarras()
+	MenuPos()
 	
 	set_physics_process(true)
 	set_process(true)
 	
 func _physics_process(delta):
 	_move(delta)
-	#damage()
 
 func _move(delta):
-	#direction.x = int(Input.is_action_pressed("move_der"))-int(Input.is_action_pressed("move_izq"))
 	direction.x = int(Input.is_action_pressed("joy_der"))-int(Input.is_action_pressed("joy_izq"))
 	
 	if direction.y != 0 and swim == false:
@@ -139,7 +137,18 @@ func actuliazar_menu():
 	$Barras/CanvasLayer/item3.animation = inv_slot[2]
 	$Barras/CanvasLayer/item4.animation = inv_slot[3]
 			
-		
+func MenuPos():
+	var posAct = Vector2()
+	posAct = $Camera2D.position
+	posAct.x = -5
+	posAct.y += 280
+	
+	$Barras/CanvasLayer/indice.position += posAct
+	$Barras/CanvasLayer/item1.position += posAct
+	$Barras/CanvasLayer/item2.position += posAct
+	$Barras/CanvasLayer/item3.position += posAct
+	$Barras/CanvasLayer/item4.position += posAct
+	
 
 ###################################
 ##Daños:

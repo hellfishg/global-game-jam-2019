@@ -111,7 +111,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Kin_Pj" type="KinematicBody2D" index="0" groups=[
+[node name="Kin_Pj" type="KinematicBody2D" groups=[
 "player",
 ]]
 
