@@ -1,11 +1,11 @@
 [gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://player/Kin_Pj.gd" type="Script" id=1]
-[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=2]
-[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=3]
-[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=4]
-[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=5]
-[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=6]
+[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=2]
+[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=3]
+[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=4]
+[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=5]
+[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=6]
 [ext_resource path="res://images/inventario3.png" type="Texture" id=7]
 [ext_resource path="res://images/inventario1.png" type="Texture" id=8]
 [ext_resource path="res://images/inventario2.png" type="Texture" id=9]
@@ -22,19 +22,19 @@
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "salto",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "mover",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": "frente",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "salto",
 "speed": 5.0
 } ]
 
@@ -171,6 +171,7 @@ offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="indice" type="AnimatedSprite" parent="Barras/CanvasLayer" index="0"]
 

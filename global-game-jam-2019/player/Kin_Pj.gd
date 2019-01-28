@@ -94,7 +94,7 @@ func _move(delta):
 		else:
 			inv_puntero = 0
 		#get_node("../../Node2/HUD/AnimatedSprite").animation = str(inv_puntero)
-		get_node("../Barras/CanvasLayer/indice").animation = str(inv_puntero)
+		$Barras/CanvasLayer/indice.animation = str(inv_puntero)
 
 	if Input.is_action_just_pressed("joy_inv_izq"):
 		if inv_puntero > 0:
@@ -102,7 +102,7 @@ func _move(delta):
 		else:
 			inv_puntero = 3
 		#get_node("../../Node2/HUD/AnimatedSprite").animation = str(inv_puntero)
-		get_node("../Barras/CanvasLayer/indice").animation = str(inv_puntero)
+		$Barras/CanvasLayer/indice.animation = str(inv_puntero)
 	if Input.is_action_just_pressed("joy_seleccion"):
 		pass
 
