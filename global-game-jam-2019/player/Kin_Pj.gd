@@ -25,6 +25,7 @@ var inv_slot = ["vacio", "vacio","vacio","vacio"]
 func _ready():
 	inv_puntero = get_node("/root/globlal").inv_puntero
 	inv_slot = get_node("/root/globlal").inv_slot
+	setearBarras()
 	
 	set_physics_process(true)
 	set_process(true)
@@ -129,17 +130,36 @@ func _move(delta):
 					
 				print(inv_slot)
 
-#	actuliazar_menu()
-#
-#func actuliazar_menu():
-# 	get_node("../Barras/CanvasLayer/item1").animation = inv_slot[0]
-#	get_node("../Barras/CanvasLayer/item2").animation = inv_slot[1]
-#	get_node("../Barras/CanvasLayer/item3").animation = inv_slot[2]
-#	get_node("../Barras/CanvasLayer/item4").animation = inv_slot[3]
-#
-#
-#
-#
+	actuliazar_menu()
+						
+func actuliazar_menu():
+	
+	$Barras/CanvasLayer/item1.animation = inv_slot[0]
+	$Barras/CanvasLayer/item2.animation = inv_slot[1]
+	$Barras/CanvasLayer/item3.animation = inv_slot[2]
+	$Barras/CanvasLayer/item4.animation = inv_slot[3]
+	
+	
+#	get_node("Kin_Pj/Barras/CanvasLayer/item1").animation = inv_slot[0]
+#	get_node("/Barras/CanvasLayer/item2").animation = inv_slot[1]
+#	get_node("/Barras/CanvasLayer/item3").animation = inv_slot[2]
+#	get_node("/Barras/CanvasLayer/item4").animation = inv_slot[3]
+	
+			
+func setearBarras():	
+	var pos = Vector2()
+	pos = self.position
+	
+	pos.y = +700
+	pos.x = +180
+	
+	$Barras/CanvasLayer/indice.position = pos
+	
+	$Barras/CanvasLayer/item1.position = pos
+	$Barras/CanvasLayer/item2.position = pos
+	$Barras/CanvasLayer/item3.position = pos
+	$Barras/CanvasLayer/item4.position = pos
+	
 
 ###################################
 

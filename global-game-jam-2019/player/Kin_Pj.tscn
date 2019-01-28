@@ -1,41 +1,121 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://player/Kin_Pj.gd" type="Script" id=1]
-[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=2]
-[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=3]
-[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=4]
-[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=5]
-[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=6]
+[ext_resource path="res://images/jugadorFrontal.png" type="Texture" id=2]
+[ext_resource path="res://images/jugadorSaltando.png" type="Texture" id=3]
+[ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=4]
+[ext_resource path="res://images/jugadorLateral2.png" type="Texture" id=5]
+[ext_resource path="res://images/jugadorLateral3.png" type="Texture" id=6]
+[ext_resource path="res://images/inventario3.png" type="Texture" id=7]
+[ext_resource path="res://images/inventario1.png" type="Texture" id=8]
+[ext_resource path="res://images/inventario2.png" type="Texture" id=9]
+[ext_resource path="res://images/inventario4.png" type="Texture" id=10]
+[ext_resource path="res://images/inventarioVacio.png" type="Texture" id=11]
+[ext_resource path="res://images/inventarioRoca.png" type="Texture" id=12]
+[ext_resource path="res://images/inventarioLlave.png" type="Texture" id=13]
+[ext_resource path="res://images/inventarioMoneda.png" type="Texture" id=14]
+[ext_resource path="res://images/inventarioCrowbar.png" type="Texture" id=15]
+[ext_resource path="res://images/inventarioBotella.png" type="Texture" id=16]
+[ext_resource path="res://images/inventarioGanzuaImprovisadapng.png" type="Texture" id=17]
+[ext_resource path="res://images/inventarioQueso.png" type="Texture" id=18]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
-"name": "mover",
+"name": "frente",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "salto",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "frente",
+"name": "mover",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
 extents = Vector2( 11.8708, 16.1753 )
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "vacio",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "roca",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "llave",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "moneda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "crowbar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "botella",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "ganzua",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "queso",
+"speed": 5.0
+} ]
 
 [node name="Kin_Pj" type="KinematicBody2D" groups=[
 "player",
 ]]
 
-position = Vector2( 54.7762, 12.503 )
+position = Vector2( 688.267, 484.146 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -45,7 +125,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="spr_Pj" type="AnimatedSprite" parent="." index="0"]
 
-frames = SubResource( 1 )
+frames = SubResource( 3 )
 animation = "frente"
 _sections_unfolded = [ "Transform" ]
 
@@ -53,11 +133,11 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( -17.0598, -16.8092 )
 scale = Vector2( 0.45231, 2.44334 )
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
-position = Vector2( -3.8147e-06, 20.735 )
+position = Vector2( -7.55261, -160.527 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -74,11 +154,65 @@ smoothing_speed = 5.0
 offset_v = 0.0
 offset_h = 0.0
 drag_margin_left = 0.2
-drag_margin_top = 0.2
+drag_margin_top = 0.5
 drag_margin_right = 0.2
 drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Transform" ]
+
+[node name="Barras" type="Node" parent="." index="3"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Barras" index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="indice" type="AnimatedSprite" parent="Barras/CanvasLayer" index="0"]
+
+position = Vector2( 170.529, 594.2 )
+scale = Vector2( 0.815252, 0.815252 )
+frames = SubResource( 1 )
+animation = "0"
+_sections_unfolded = [ "Transform" ]
+
+[node name="item1" type="AnimatedSprite" parent="Barras/CanvasLayer" index="1"]
+
+position = Vector2( 48.438, 603.365 )
+scale = Vector2( 0.81482, 0.81482 )
+frames = SubResource( 2 )
+animation = "botella"
+
+[node name="item2" type="AnimatedSprite" parent="Barras/CanvasLayer" index="2"]
+
+position = Vector2( 129.419, 602.417 )
+scale = Vector2( 0.75975, 0.75975 )
+frames = SubResource( 2 )
+animation = "botella"
+
+[node name="item3" type="AnimatedSprite" parent="Barras/CanvasLayer" index="3"]
+
+position = Vector2( 213.006, 601.971 )
+scale = Vector2( 0.768885, 0.768885 )
+frames = SubResource( 2 )
+animation = "botella"
+
+[node name="item4" type="AnimatedSprite" parent="Barras/CanvasLayer" index="4"]
+
+position = Vector2( 290.79, 603.676 )
+scale = Vector2( 0.766876, 0.766876 )
+frames = SubResource( 2 )
+animation = "botella"
+
+[node name="Timer" type="Timer" parent="Barras" index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
 
 
