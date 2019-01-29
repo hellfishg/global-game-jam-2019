@@ -1,0 +1,1362 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://bgm/patio1.jpg" type="Texture" id=1]
+[ext_resource path="res://bgm/patio2.jpg" type="Texture" id=2]
+[ext_resource path="res://bgm/living2.jpg" type="Texture" id=3]
+[ext_resource path="res://bgm/living1.jpg" type="Texture" id=4]
+[ext_resource path="res://bgm/cocina1.jpg" type="Texture" id=5]
+[ext_resource path="res://bgm/cocina2.jpg" type="Texture" id=6]
+[ext_resource path="res://tilsets/Tilset.tres" type="TileSet" id=7]
+[ext_resource path="res://Items/Agua.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/Agua.gd" type="Script" id=9]
+[ext_resource path="res://Item_piso.gd" type="Script" id=10]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada3.png" type="Texture" id=11]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada.png" type="Texture" id=12]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada2.png" type="Texture" id=13]
+[ext_resource path="res://images/lootLlaveCrowbar3.png" type="Texture" id=14]
+[ext_resource path="res://images/lootLlaveCrowbar1.png" type="Texture" id=15]
+[ext_resource path="res://images/lootLlaveCrowbar2.png" type="Texture" id=16]
+[ext_resource path="res://images/lootLlaveRoca3.png" type="Texture" id=17]
+[ext_resource path="res://images/lootLlaveRoca.png" type="Texture" id=18]
+[ext_resource path="res://images/lootLlaveRoca2.png" type="Texture" id=19]
+[ext_resource path="res://images/lootLlave1.png" type="Texture" id=20]
+[ext_resource path="res://images/lootLlave3.png" type="Texture" id=21]
+[ext_resource path="res://images/lootLlave2.png" type="Texture" id=22]
+[ext_resource path="res://level_2/Cofre_ganzua.gd" type="Script" id=23]
+[ext_resource path="res://images/leprechaun.png" type="Texture" id=24]
+[ext_resource path="res://images/mesada.png" type="Texture" id=25]
+[ext_resource path="res://images/cofre.png" type="Texture" id=26]
+[ext_resource path="res://images/raton.png" type="Texture" id=27]
+[ext_resource path="res://images/maceta.png" type="Texture" id=28]
+[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=29]
+[ext_resource path="res://images/armario.png" type="Texture" id=30]
+[ext_resource path="res://images/heladeraAbajo.png" type="Texture" id=31]
+[ext_resource path="res://Items/Contenedor.gd" type="Script" id=32]
+[ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Items/Botella.gd" type="Script" id=34]
+[ext_resource path="res://Exits/Puerta.gd" type="Script" id=35]
+[ext_resource path="res://images/puertaBaño.png" type="Texture" id=36]
+[ext_resource path="res://images/puertaCasa.png" type="Texture" id=37]
+[ext_resource path="res://player/Kin_Pj.tscn" type="PackedScene" id=38]
+[ext_resource path="res://player/Kin_Pj.gd" type="Script" id=39]
+[ext_resource path="res://level_2/Puerta2.gd" type="Script" id=40]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "clip",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "crowbar",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "roca",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "llave",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 24.4264, 26.0299 )
+
+[sub_resource type="SpriteFrames" id=3]
+
+animations = [ {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "duende",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "mesada",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "cofre",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "raton",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "maceta",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "heladera_ar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "armario",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "heladera",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 26.7875, 21.7845 )
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "duende",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "mesada",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "cofre",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "raton",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "maceta",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "heladera_ar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "armario",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "heladera",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+
+custom_solver_bias = 0.0
+extents = Vector2( 26.7875, 21.7845 )
+
+[sub_resource type="SpriteFrames" id=7]
+
+animations = [ {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "puerta_banio",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "puerta_casa",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 26.1147, 51.4663 )
+
+[sub_resource type="SpriteFrames" id=9]
+
+animations = [ {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "puerta_banio",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "puerta_casa",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=10]
+
+custom_solver_bias = 0.0
+extents = Vector2( 17.0353, 49.8405 )
+
+[node name="level2_final" type="Node" index="1"]
+
+[node name="Backgrounds" type="Node" parent="." index="0"]
+
+editor/display_folded = true
+
+[node name="Background1" type="Sprite" parent="Backgrounds" index="0"]
+
+position = Vector2( 5450.52, 23.9419 )
+texture = ExtResource( 1 )
+flip_h = true
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background3" type="Sprite" parent="Backgrounds" index="1"]
+
+position = Vector2( 2222.9, -3371.36 )
+scale = Vector2( 4.66436, 4.66436 )
+texture = ExtResource( 2 )
+flip_v = true
+_sections_unfolded = [ "Offset" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Living2" type="Sprite" parent="Backgrounds" index="2"]
+
+position = Vector2( 1802.58, 0.403076 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Living1" type="Sprite" parent="Backgrounds" index="3"]
+
+position = Vector2( 9.67181, -0.579102 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background2" type="Sprite" parent="Backgrounds" index="4"]
+
+position = Vector2( -1940.4, 17.8758 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cocina1" type="Sprite" parent="Backgrounds" index="5"]
+
+position = Vector2( 3601.1, 0.196228 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cocina2" type="Sprite" parent="Backgrounds" index="6"]
+
+position = Vector2( 3586.83, -1199 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TileMap" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -2752448, 2, 0, -2752447, 2, 0, -2752446, 2, 0, -2752445, 2, 0, -2752444, 2, 0, -2752443, 2, 0, -2752442, 2, 0, -2752441, 2, 0, -2752440, 2, 0, -2752439, 2, 0, -2752438, 2, 0, -2752437, 2, 0, -2752436, 2, 0, -2752435, 2, 0, -2752434, 2, 0, -2686916, 2, 0, -2686915, 2, 0, -2686914, 2, 0, -2686913, 2, 0, -2686912, 2, 0, -2686911, 2, 0, -2686910, 2, 0, -2686909, 2, 0, -2686908, 2, 0, -2686907, 2, 0, -2686906, 2, 0, -2686905, 2, 0, -2686904, 2, 0, -2686903, 2, 0, -2686902, 2, 0, -2686901, 2, 0, -2686900, 2, 0, -2686899, 2, 0, -2686898, 2, 0, -2686897, 2, 0, -2686896, 2, 0, -2686895, 2, 0, -2686894, 2, 0, -2621384, 2, 0, -2621383, 2, 0, -2621382, 2, 0, -2621381, 2, 0, -2621380, 2, 0, -2621379, 2, 0, -2621378, 2, 0, -2621377, 2, 0, -2621376, 2, 0, -2621375, 2, 0, -2621374, 2, 0, -2621373, 2, 0, -2621372, 2, 0, -2621371, 2, 0, -2621370, 2, 0, -2621369, 2, 0, -2621368, 2, 0, -2621367, 2, 0, -2621366, 2, 0, -2621365, 2, 0, -2621364, 2, 0, -2621363, 2, 0, -2621362, 2, 0, -2621361, 2, 0, -2621360, 2, 0, -2621359, 2, 0, -2621358, 2, 0, -2621357, 2, 0, -2621356, 2, 0, -2621355, 2, 0, -2621354, 2, 0, -2555852, 2, 0, -2555851, 2, 0, -2555850, 2, 0, -2555849, 2, 0, -2555848, 2, 0, -2555847, 2, 0, -2555846, 2, 0, -2555845, 2, 0, -2555844, 2, 0, -2555843, 2, 0, -2555842, 2, 0, -2555841, 2, 0, -2555840, 2, 0, -2555839, 2, 0, -2555838, 2, 0, -2555837, 2, 0, -2555836, 2, 0, -2555835, 2, 0, -2555834, 2, 0, -2555833, 2, 0, -2555832, 2, 0, -2555831, 2, 0, -2555830, 2, 0, -2555829, 2, 0, -2555828, 2, 0, -2555827, 2, 0, -2555826, 2, 0, -2555825, 2, 0, -2555824, 2, 0, -2555823, 2, 0, -2555822, 2, 0, -2555821, 2, 0, -2555820, 2, 0, -2555819, 2, 0, -2555818, 2, 0, -2555817, 2, 0, -2555816, 2, 0, -2555815, 2, 0, -2555814, 2, 0, -2490316, 2, 0, -2490315, 2, 0, -2490314, 2, 0, -2490313, 2, 0, -2490312, 2, 0, -2490311, 2, 0, -2490310, 2, 0, -2490309, 2, 0, -2490308, 2, 0, -2490307, 2, 0, -2490306, 2, 0, -2490305, 2, 0, -2490304, 2, 0, -2490303, 2, 0, -2490302, 2, 0, -2490301, 2, 0, -2490300, 2, 0, -2490299, 2, 0, -2490298, 2, 0, -2490297, 2, 0, -2490296, 2, 0, -2490295, 2, 0, -2490294, 2, 0, -2490293, 2, 0, -2490292, 2, 0, -2490291, 2, 0, -2490290, 2, 0, -2490289, 2, 0, -2490288, 2, 0, -2490287, 2, 0, -2490286, 2, 0, -2490285, 2, 0, -2490284, 2, 0, -2490283, 2, 0, -2490282, 2, 0, -2490281, 2, 0, -2490280, 2, 0, -2490279, 2, 0, -2490278, 2, 0, -2424780, 2, 0, -2424779, 3, 0, -2424778, 3, 0, -2424777, 3, 0, -2424776, 3, 0, -2424775, 3, 0, -2424774, 3, 0, -2424773, 3, 0, -2424772, 3, 0, -2424771, 3, 0, -2424770, 3, 0, -2424769, 3, 0, -2424768, 3, 0, -2424767, 3, 0, -2424766, 3, 0, -2424765, 3, 0, -2424764, 3, 0, -2424763, 3, 0, -2424762, 3, 0, -2424761, 3, 0, -2424760, 3, 0, -2424759, 3, 0, -2424758, 3, 0, -2424757, 3, 0, -2424756, 3, 0, -2424755, 3, 0, -2424754, 3, 0, -2424753, 3, 0, -2424752, 3, 0, -2424751, 3, 0, -2424750, 3, 0, -2424749, 3, 0, -2424748, 3, 0, -2424747, 3, 0, -2424746, 3, 0, -2424745, 3, 0, -2424744, 3, 0, -2424743, 3, 0, -2424742, 2, 0, -2359244, 2, 0, -2359243, 3, 0, -2359207, 3, 0, -2359206, 2, 0, -2293708, 2, 0, -2293707, 3, 0, -2293671, 3, 0, -2293670, 2, 0, -2228172, 2, 0, -2228171, 3, 0, -2228135, 3, 0, -2228134, 2, 0, -2162636, 2, 0, -2162635, 3, 0, -2162602, 4, 0, -2162599, 3, 0, -2162598, 2, 0, -2097100, 2, 0, -2097099, 3, 0, -2097066, 4, 0, -2097065, 4, 0, -2097063, 3, 0, -2097062, 2, 0, -2031564, 2, 0, -2031563, 3, 0, -2031530, 4, 0, -2031529, 4, 0, -2031528, 4, 0, -2031527, 3, 0, -2031526, 2, 0, -1966028, 2, 0, -1966027, 3, 0, -1965994, 2, 0, -1965993, 2, 0, -1965992, 2, 0, -1965991, 3, 0, -1965990, 2, 0, -1900492, 2, 0, -1900491, 3, 0, -1900455, 3, 0, -1900454, 2, 0, -1834956, 2, 0, -1834955, 3, 0, -1834919, 3, 0, -1834918, 2, 0, -1769420, 2, 0, -1769419, 3, 0, -1769417, 2, 0, -1769412, 2, 0, -1769407, 2, 0, -1769402, 2, 0, -1769397, 2, 0, -1769392, 2, 0, -1769383, 3, 0, -1769382, 2, 0, -1703884, 2, 0, -1703883, 3, 0, -1703847, 3, 0, -1703846, 2, 0, -1638348, 2, 0, -1638347, 3, 0, -1638311, 3, 0, -1638310, 2, 0, -1572812, 2, 0, -1572811, 3, 0, -1572810, 2, 0, -1572775, 3, 0, -1572774, 2, 0, -1507276, 2, 0, -1507275, 3, 0, -1507239, 3, 0, -1507238, 2, 0, -1441740, 2, 0, -1441739, 3, 0, -1441703, 3, 0, -1441702, 2, 0, -1376204, 2, 0, -1376203, 3, 0, -1376201, 2, 0, -1376199, 2, 0, -1376197, 2, 0, -1376195, 2, 0, -1376193, 2, 0, -1376191, 2, 0, -1376189, 2, 0, -1376169, 2, 0, -1376168, 2, 0, -1376167, 3, 0, -1376166, 2, 0, -1310668, 2, 0, -1310667, 3, 0, -1310631, 3, 0, -1310630, 2, 0, -1245132, 2, 0, -1245131, 3, 0, -1245095, 3, 0, -1245094, 2, 0, -1179596, 2, 0, -1179595, 3, 0, -1179559, 3, 0, -1179558, 2, 0, -1114060, 2, 0, -1114059, 3, 0, -1114043, 3, 0, -1114042, 3, 0, -1114023, 3, 0, -1114022, 2, 0, -1048524, 2, 0, -1048523, 3, 0, -1048522, 3, 0, -1048487, 3, 0, -1048486, 2, 0, -917526, 2, 0, -917525, 2, 0, -917524, 2, 0, -917523, 2, 0, -917522, 2, 0, -917521, 2, 0, -917520, 2, 0, -917519, 2, 0, -917518, 2, 0, -917517, 2, 0, -917516, 2, 0, -917515, 2, 0, -917514, 2, 0, -917513, 2, 0, -917512, 2, 0, -917511, 2, 0, -917510, 2, 0, -917509, 2, 0, -917508, 2, 0, -917507, 2, 0, -917506, 2, 0, -917505, 2, 0, -983040, 2, 0, -983039, 2, 0, -983038, 2, 0, -983037, 2, 0, -983036, 2, 0, -983035, 2, 0, -983034, 2, 0, -983033, 2, 0, -983032, 2, 0, -983031, 2, 0, -983030, 2, 0, -983029, 2, 0, -983028, 2, 0, -983027, 2, 0, -983026, 2, 0, -983025, 2, 0, -983024, 2, 0, -983023, 2, 0, -983022, 2, 0, -983021, 2, 0, -983020, 2, 0, -983019, 2, 0, -983018, 2, 0, -983017, 2, 0, -983016, 2, 0, -983015, 2, 0, -983014, 2, 0, -983013, 2, 0, -983012, 2, 0, -983011, 2, 0, -983010, 2, 0, -983009, 2, 0, -983008, 2, 0, -983007, 2, 0, -983006, 2, 0, -983005, 2, 0, -983004, 2, 0, -983003, 2, 0, -983002, 2, 0, -983001, 2, 0, -983000, 2, 0, -982999, 2, 0, -982998, 2, 0, -982997, 2, 0, -982996, 2, 0, -982995, 2, 0, -982994, 2, 0, -982993, 2, 0, -982992, 2, 0, -982991, 2, 0, -982990, 2, 0, -982989, 2, 0, -982988, 2, 0, -982987, 3, 0, -982951, 3, 0, -982950, 2, 0, -851990, 2, 0, -851989, 2, 0, -851988, 2, 0, -851987, 2, 0, -851986, 2, 0, -851985, 2, 0, -851984, 2, 0, -851983, 2, 0, -851982, 2, 0, -851981, 2, 0, -851980, 2, 0, -851979, 2, 0, -851978, 2, 0, -851977, 2, 0, -851976, 2, 0, -851975, 2, 0, -851974, 2, 0, -851973, 2, 0, -851972, 2, 0, -851971, 2, 0, -851970, 2, 0, -851969, 2, 0, -917504, 2, 0, -917503, 2, 0, -917502, 2, 0, -917501, 2, 0, -917500, 2, 0, -917499, 2, 0, -917498, 2, 0, -917497, 2, 0, -917496, 2, 0, -917495, 2, 0, -917494, 2, 0, -917493, 2, 0, -917492, 2, 0, -917491, 2, 0, -917490, 2, 0, -917489, 2, 0, -917488, 2, 0, -917487, 2, 0, -917486, 2, 0, -917485, 2, 0, -917484, 2, 0, -917483, 2, 0, -917482, 2, 0, -917481, 2, 0, -917480, 2, 0, -917479, 2, 0, -917478, 2, 0, -917477, 2, 0, -917476, 2, 0, -917475, 2, 0, -917474, 2, 0, -917473, 2, 0, -917472, 2, 0, -917471, 2, 0, -917470, 2, 0, -917469, 2, 0, -917468, 2, 0, -917467, 2, 0, -917466, 2, 0, -917465, 2, 0, -917464, 2, 0, -917463, 2, 0, -917462, 2, 0, -917461, 2, 0, -917460, 2, 0, -917459, 2, 0, -917458, 2, 0, -917457, 2, 0, -917456, 2, 0, -917455, 2, 0, -917454, 2, 0, -917453, 2, 0, -917452, 2, 0, -917451, 3, 0, -917415, 3, 0, -917414, 2, 0, -786454, 2, 0, -786453, 2, 0, -786452, 2, 0, -786451, 2, 0, -786450, 2, 0, -786449, 2, 0, -786448, 2, 0, -786447, 2, 0, -786446, 2, 0, -786445, 2, 0, -786444, 2, 0, -786443, 2, 0, -786442, 2, 0, -786441, 2, 0, -786440, 2, 0, -786439, 2, 0, -786438, 2, 0, -786437, 2, 0, -786436, 2, 0, -786435, 2, 0, -786434, 2, 0, -786433, 2, 0, -851968, 2, 0, -851967, 2, 0, -851966, 2, 0, -851965, 2, 0, -851964, 2, 0, -851963, 2, 0, -851962, 2, 0, -851961, 2, 0, -851960, 2, 0, -851959, 2, 0, -851958, 2, 0, -851957, 2, 0, -851956, 2, 0, -851955, 2, 0, -851954, 2, 0, -851953, 2, 0, -851952, 2, 0, -851951, 2, 0, -851950, 2, 0, -851949, 2, 0, -851948, 2, 0, -851947, 2, 0, -851946, 2, 0, -851945, 2, 0, -851944, 2, 0, -851943, 2, 0, -851942, 2, 0, -851941, 2, 0, -851940, 2, 0, -851939, 2, 0, -851938, 2, 0, -851937, 2, 0, -851936, 2, 0, -851935, 2, 0, -851934, 2, 0, -851933, 2, 0, -851932, 2, 0, -851931, 2, 0, -851930, 2, 0, -851929, 2, 0, -851928, 2, 0, -851927, 2, 0, -851926, 2, 0, -851925, 2, 0, -851924, 2, 0, -851923, 2, 0, -851922, 2, 0, -851921, 2, 0, -851920, 2, 0, -851919, 2, 0, -851918, 2, 0, -851917, 2, 0, -851916, 2, 0, -851915, 3, 0, -851905, 3, 0, -851904, 3, 0, -851879, 3, 0, -851878, 2, 0, -720918, 2, 0, -720917, 2, 0, -720916, 2, 0, -720915, 2, 0, -720914, 2, 0, -786380, 2, 0, -786379, 3, 0, -786354, 3, 0, -786353, 3, 0, -786343, 3, 0, -786342, 2, 0, -655382, 2, 0, -655381, 2, 0, -655380, 2, 0, -655379, 2, 0, -655378, 2, 0, -720844, 2, 0, -720843, 3, 0, -720807, 3, 0, -720806, 2, 0, -589846, 2, 0, -589845, 2, 0, -589844, 2, 0, -589843, 2, 0, -589842, 2, 0, -655308, 2, 0, -655307, 3, 0, -655306, 3, 0, -655305, 3, 0, -655272, 3, 0, -655271, 3, 0, -655270, 2, 0, -524310, 2, 0, -524309, 2, 0, -524308, 2, 0, -524307, 2, 0, -524306, 2, 0, -589772, 2, 0, -589771, 3, 0, -589754, 3, 0, -589753, 3, 0, -589735, 3, 0, -589734, 2, 0, -458774, 2, 0, -458773, 2, 0, -458772, 2, 0, -458771, 2, 0, -458770, 2, 0, -524239, 2, 0, -524238, 2, 0, -524237, 2, 0, -524236, 2, 0, -524235, 3, 0, -524199, 3, 0, -524198, 2, 0, -393238, 2, 0, -393237, 2, 0, -393236, 2, 0, -393235, 2, 0, -393234, 2, 0, -458700, 2, 0, -458699, 3, 0, -458663, 3, 0, -458662, 2, 0, -327702, 2, 0, -327701, 2, 0, -327700, 2, 0, -327699, 2, 0, -327698, 2, 0, -393164, 2, 0, -393163, 3, 0, -393127, 3, 0, -393126, 2, 0, -262166, 2, 0, -262165, 2, 0, -262164, 2, 0, -262163, 2, 0, -262162, 2, 0, -327628, 2, 0, -327627, 3, 0, -327591, 3, 0, -327590, 2, 0, -196630, 2, 0, -196629, 2, 0, -196628, 2, 0, -196627, 2, 0, -196626, 2, 0, -196622, 2, 0, -196614, 2, 0, -196613, 2, 0, -196612, 2, 0, -262125, 4, 0, -262124, 4, 0, -262113, 4, 0, -262112, 4, 0, -262111, 4, 0, -262101, 4, 0, -262092, 2, 0, -262091, 3, 0, -262090, 3, 0, -262089, 3, 0, -262088, 3, 0, -262087, 3, 0, -262086, 3, 0, -262085, 3, 0, -262084, 3, 0, -262083, 3, 0, -262082, 3, 0, -262081, 3, 0, -262080, 3, 0, -262079, 3, 0, -262078, 3, 0, -262077, 3, 0, -262058, 3, 0, -262057, 3, 0, -262056, 3, 0, -262055, 3, 0, -262054, 2, 0, -131094, 2, 0, -131093, 2, 0, -131092, 2, 0, -131091, 2, 0, -131090, 2, 0, -131089, 2, 0, -131088, 2, 0, -131086, 2, 0, -196602, 2, 0, -196601, 2, 0, -196600, 2, 0, -196556, 2, 0, -196555, 3, 0, -196519, 3, 0, -196518, 2, 0, -65558, 2, 0, -65557, 2, 0, -65556, 2, 0, -65555, 2, 0, -65554, 2, 0, -65550, 2, 0, -131020, 2, 0, -131019, 3, 0, -130983, 3, 0, -130982, 2, 0, -22, 2, 0, -21, 2, 0, -20, 2, 0, -19, 2, 0, -18, 2, 0, -14, 2, 0, -65484, 2, 0, -65483, 3, 0, -65482, 3, 0, -65481, 3, 0, -65480, 3, 0, -65447, 3, 0, -65446, 2, 0, 65514, 2, 0, 65515, 2, 0, 65516, 2, 0, 65517, 2, 0, 65518, 2, 0, 65522, 2, 0, 52, 2, 0, 53, 3, 0, 78, 3, 0, 79, 3, 0, 89, 3, 0, 90, 2, 0, 131050, 2, 0, 131051, 2, 0, 131052, 2, 0, 131053, 2, 0, 131054, 2, 0, 131058, 2, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 65556, 4, 0, 65588, 2, 0, 65589, 3, 0, 65612, 3, 0, 65613, 3, 0, 65625, 3, 0, 65626, 2, 0, 196586, 2, 0, 196587, 2, 0, 196588, 2, 0, 196589, 2, 0, 196590, 2, 0, 196594, 2, 0, 131099, 4, 0, 131100, 4, 0, 131124, 2, 0, 131125, 3, 0, 131161, 3, 0, 131162, 2, 0, 262122, 2, 0, 262123, 2, 0, 262124, 2, 0, 262125, 2, 0, 262126, 2, 0, 262127, 2, 0, 262128, 2, 0, 262129, 2, 0, 262130, 2, 0, 196660, 2, 0, 196661, 3, 0, 196697, 3, 0, 196698, 2, 0, 327658, 2, 0, 327659, 2, 0, 327660, 2, 0, 327661, 2, 0, 327662, 2, 0, 262196, 2, 0, 262197, 3, 0, 262233, 3, 0, 262234, 2, 0, 393194, 2, 0, 393195, 2, 0, 393196, 2, 0, 393197, 2, 0, 393198, 2, 0, 327690, 4, 0, 327691, 4, 0, 327732, 2, 0, 327733, 3, 0, 327734, 3, 0, 327735, 3, 0, 327736, 3, 0, 327737, 3, 0, 327738, 3, 0, 327739, 3, 0, 327740, 3, 0, 327741, 3, 0, 327742, 3, 0, 327743, 3, 0, 327744, 3, 0, 327745, 3, 0, 327746, 3, 0, 327747, 3, 0, 327748, 3, 0, 327749, 3, 0, 327769, 3, 0, 327770, 2, 0, 458730, 2, 0, 458731, 2, 0, 458732, 2, 0, 458733, 2, 0, 458734, 2, 0, 393268, 2, 0, 393269, 2, 0, 393270, 2, 0, 393271, 2, 0, 393272, 2, 0, 393273, 2, 0, 393274, 2, 0, 393275, 2, 0, 393276, 2, 0, 393277, 2, 0, 393278, 3, 0, 393305, 3, 0, 393306, 2, 0, 524266, 2, 0, 524267, 2, 0, 524268, 2, 0, 524269, 2, 0, 524270, 2, 0, 458804, 2, 0, 458805, 2, 0, 458806, 2, 0, 458807, 2, 0, 458808, 2, 0, 458809, 2, 0, 458810, 2, 0, 458811, 2, 0, 458812, 2, 0, 458813, 2, 0, 458814, 3, 0, 458841, 3, 0, 458842, 2, 0, 589801, 4, 0, 589802, 2, 0, 589803, 2, 0, 589804, 2, 0, 589805, 2, 0, 589806, 2, 0, 524313, 4, 0, 524340, 2, 0, 524341, 2, 0, 524342, 3, 0, 524343, 3, 0, 524344, 3, 0, 524345, 3, 0, 524346, 3, 0, 524347, 3, 0, 524348, 3, 0, 524349, 3, 0, 524350, 3, 0, 524365, 3, 0, 524366, 3, 0, 524377, 3, 0, 524378, 2, 0, 655336, 4, 0, 655337, 4, 0, 655338, 2, 0, 655339, 2, 0, 655340, 2, 0, 655341, 2, 0, 589848, 4, 0, 589849, 4, 0, 589913, 3, 0, 589914, 2, 0, 720871, 4, 0, 720872, 4, 0, 720873, 4, 0, 720874, 2, 0, 720875, 2, 0, 720876, 2, 0, 720877, 2, 0, 655383, 4, 0, 655384, 4, 0, 655385, 4, 0, 655449, 3, 0, 655450, 2, 0, 786406, 4, 0, 786407, 4, 0, 786408, 4, 0, 786409, 4, 0, 786410, 2, 0, 786411, 2, 0, 786412, 2, 0, 786413, 2, 0, 720918, 4, 0, 720919, 4, 0, 720920, 4, 0, 720921, 4, 0, 720985, 3, 0, 720986, 2, 0, 851935, 0, 0, 851936, 0, 0, 851937, 0, 0, 851938, 0, 0, 851939, 0, 0, 851940, 0, 0, 851941, 0, 0, 851942, 0, 0, 851943, 0, 0, 851944, 0, 0, 851945, 0, 0, 851946, 2, 0, 851947, 2, 0, 851948, 2, 0, 851949, 2, 0, 851950, 2, 0, 851951, 2, 0, 851952, 2, 0, 851953, 2, 0, 851954, 2, 0, 851955, 2, 0, 851956, 2, 0, 851957, 2, 0, 851958, 2, 0, 851959, 2, 0, 851960, 2, 0, 851961, 2, 0, 851962, 2, 0, 851963, 2, 0, 851964, 2, 0, 851965, 2, 0, 851966, 2, 0, 851967, 2, 0, 786432, 2, 0, 786433, 2, 0, 786434, 2, 0, 786435, 2, 0, 786436, 2, 0, 786437, 2, 0, 786438, 2, 0, 786439, 2, 0, 786440, 2, 0, 786441, 2, 0, 786442, 2, 0, 786443, 2, 0, 786444, 2, 0, 786445, 2, 0, 786446, 2, 0, 786447, 2, 0, 786448, 2, 0, 786449, 2, 0, 786450, 2, 0, 786451, 2, 0, 786452, 2, 0, 786453, 2, 0, 786454, 2, 0, 786455, 2, 0, 786456, 2, 0, 786457, 2, 0, 786458, 2, 0, 786459, 2, 0, 786460, 2, 0, 786461, 2, 0, 786462, 2, 0, 786463, 2, 0, 786464, 2, 0, 786465, 2, 0, 786466, 2, 0, 786467, 2, 0, 786468, 2, 0, 786469, 2, 0, 786470, 2, 0, 786471, 2, 0, 786472, 2, 0, 786473, 2, 0, 786474, 2, 0, 786475, 2, 0, 786476, 2, 0, 786477, 2, 0, 786478, 2, 0, 786479, 2, 0, 786480, 2, 0, 786481, 2, 0, 786482, 2, 0, 786483, 2, 0, 786484, 2, 0, 786485, 2, 0, 786486, 3, 0, 786487, 3, 0, 786488, 3, 0, 786489, 3, 0, 786490, 3, 0, 786491, 3, 0, 786492, 3, 0, 786493, 3, 0, 786494, 3, 0, 786495, 3, 0, 786496, 3, 0, 786497, 3, 0, 786498, 3, 0, 786499, 3, 0, 786500, 3, 0, 786501, 3, 0, 786502, 3, 0, 786503, 3, 0, 786504, 3, 0, 786505, 3, 0, 786506, 3, 0, 786507, 3, 0, 786508, 3, 0, 786509, 3, 0, 786510, 3, 0, 786511, 3, 0, 786512, 3, 0, 786513, 3, 0, 786514, 3, 0, 786515, 3, 0, 786516, 3, 0, 786517, 3, 0, 786518, 3, 0, 786519, 3, 0, 786520, 3, 0, 786521, 3, 0, 786522, 2, 0, 786523, 0, 0, 786524, 0, 0, 786525, 0, 0, 786526, 0, 0, 786527, 0, 0, 786528, 0, 0, 786529, 0, 0, 786530, 0, 0, 786531, 0, 0, 786532, 0, 0, 786533, 0, 0, 786534, 0, 0, 786535, 0, 0, 786536, 0, 0, 917471, 0, 0, 917472, 0, 0, 917473, 0, 0, 917474, 0, 0, 917475, 0, 0, 917476, 0, 0, 917477, 0, 0, 917478, 0, 0, 917479, 0, 0, 917480, 0, 0, 917481, 0, 0, 917482, 2, 0, 917483, 2, 0, 917484, 2, 0, 917485, 2, 0, 917486, 2, 0, 917487, 2, 0, 917488, 2, 0, 917489, 2, 0, 917490, 2, 0, 917491, 2, 0, 917492, 2, 0, 917493, 2, 0, 917494, 2, 0, 917495, 2, 0, 917496, 2, 0, 917497, 2, 0, 917498, 2, 0, 917499, 2, 0, 917500, 2, 0, 917501, 2, 0, 917502, 2, 0, 917503, 2, 0, 851968, 2, 0, 851969, 2, 0, 851970, 2, 0, 851971, 2, 0, 851972, 2, 0, 851973, 2, 0, 851974, 2, 0, 851975, 2, 0, 851976, 2, 0, 851977, 2, 0, 851978, 2, 0, 851979, 2, 0, 851980, 2, 0, 851981, 2, 0, 851982, 2, 0, 851983, 2, 0, 851984, 2, 0, 851985, 2, 0, 851986, 2, 0, 851987, 2, 0, 851988, 2, 0, 851989, 2, 0, 851990, 2, 0, 851991, 2, 0, 851992, 2, 0, 851993, 2, 0, 851994, 2, 0, 851995, 2, 0, 851996, 2, 0, 851997, 2, 0, 851998, 2, 0, 851999, 2, 0, 852000, 2, 0, 852001, 2, 0, 852002, 2, 0, 852003, 2, 0, 852004, 2, 0, 852005, 2, 0, 852006, 2, 0, 852007, 2, 0, 852008, 2, 0, 852009, 2, 0, 852010, 2, 0, 852011, 2, 0, 852012, 2, 0, 852013, 2, 0, 852014, 2, 0, 852015, 2, 0, 852016, 2, 0, 852017, 2, 0, 852018, 2, 0, 852019, 2, 0, 852020, 2, 0, 852021, 2, 0, 852022, 2, 0, 852023, 2, 0, 852024, 2, 0, 852025, 2, 0, 852026, 2, 0, 852027, 2, 0, 852028, 2, 0, 852029, 2, 0, 852030, 2, 0, 852031, 2, 0, 852032, 2, 0, 852033, 2, 0, 852034, 2, 0, 852035, 2, 0, 852036, 2, 0, 852037, 2, 0, 852038, 2, 0, 852039, 2, 0, 852040, 2, 0, 852041, 2, 0, 852042, 2, 0, 852043, 2, 0, 852044, 2, 0, 852045, 2, 0, 852046, 2, 0, 852047, 2, 0, 852048, 2, 0, 852049, 2, 0, 852050, 2, 0, 852051, 2, 0, 852052, 2, 0, 852053, 2, 0, 852054, 2, 0, 852055, 2, 0, 852056, 2, 0, 852057, 2, 0, 852058, 2, 0, 852059, 0, 0, 852060, 0, 0, 852061, 0, 0, 852062, 0, 0, 852063, 0, 0, 852064, 0, 0, 852065, 0, 0, 852066, 0, 0, 852067, 0, 0, 852068, 0, 0, 852069, 0, 0, 852070, 0, 0, 852071, 0, 0, 852072, 0, 0, 983007, 0, 0, 983008, 0, 0, 983009, 0, 0, 983010, 0, 0, 983011, 0, 0, 983012, 0, 0, 983013, 0, 0, 983014, 0, 0, 983015, 0, 0, 983016, 0, 0, 983017, 0, 0, 983018, 2, 0, 983019, 2, 0, 983020, 2, 0, 983021, 2, 0, 983022, 2, 0, 983023, 2, 0, 983024, 2, 0, 983025, 2, 0, 983026, 2, 0, 983027, 2, 0, 983028, 2, 0, 983029, 2, 0, 983030, 2, 0, 983031, 2, 0, 983032, 2, 0, 983033, 2, 0, 983034, 2, 0, 983035, 2, 0, 983036, 2, 0, 983037, 2, 0, 983038, 2, 0, 983039, 2, 0, 917504, 2, 0, 917505, 2, 0, 917506, 2, 0, 917507, 2, 0, 917508, 2, 0, 917509, 2, 0, 917510, 2, 0, 917511, 2, 0, 917512, 2, 0, 917513, 2, 0, 917514, 2, 0, 917515, 2, 0, 917516, 2, 0, 917517, 2, 0, 917518, 2, 0, 917519, 2, 0, 917520, 2, 0, 917521, 2, 0, 917522, 2, 0, 917523, 2, 0, 917524, 2, 0, 917525, 2, 0, 917526, 2, 0, 917527, 2, 0, 917528, 2, 0, 917529, 2, 0, 917530, 2, 0, 917531, 2, 0, 917532, 2, 0, 917533, 2, 0, 917534, 2, 0, 917535, 2, 0, 917536, 2, 0, 917537, 2, 0, 917538, 2, 0, 917539, 2, 0, 917540, 2, 0, 917541, 2, 0, 917542, 2, 0, 917543, 2, 0, 917544, 2, 0, 917545, 2, 0, 917546, 2, 0, 917547, 2, 0, 917548, 2, 0, 917549, 2, 0, 917550, 2, 0, 917551, 2, 0, 917552, 2, 0, 917553, 2, 0, 917554, 2, 0, 917555, 2, 0, 917556, 2, 0, 917557, 2, 0, 917558, 2, 0, 917559, 2, 0, 917560, 2, 0, 917561, 2, 0, 917562, 2, 0, 917563, 2, 0, 917564, 2, 0, 917565, 2, 0, 917566, 2, 0, 917567, 2, 0, 917568, 2, 0, 917569, 2, 0, 917570, 2, 0, 917571, 2, 0, 917572, 2, 0, 917573, 2, 0, 917574, 2, 0, 917575, 2, 0, 917576, 2, 0, 917577, 2, 0, 917578, 2, 0, 917579, 2, 0, 917580, 2, 0, 917581, 2, 0, 917582, 2, 0, 917583, 2, 0, 917584, 2, 0, 917585, 2, 0, 917586, 2, 0, 917587, 2, 0, 917588, 2, 0, 917589, 2, 0, 917590, 2, 0, 917591, 2, 0, 917592, 2, 0, 917593, 2, 0, 917594, 2, 0, 917595, 0, 0, 917596, 0, 0, 917597, 0, 0, 917598, 0, 0, 917599, 0, 0, 917600, 0, 0, 917601, 0, 0, 917602, 0, 0, 917603, 0, 0, 917604, 0, 0, 917605, 0, 0, 917606, 0, 0, 917607, 0, 0, 917608, 0, 0 )
+_sections_unfolded = [ "Cell" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Items" type="Node" parent="." index="2"]
+
+[node name="Agua" type="StaticBody2D" parent="Items" index="0" groups=[
+"items",
+] instance=ExtResource( 8 )]
+
+position = Vector2( 4324.53, -225.061 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Agua2" type="StaticBody2D" parent="Items" index="1" groups=[
+"items",
+] instance=ExtResource( 8 )]
+
+position = Vector2( 3142.54, -32.5107 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Queso" type="Area2D" parent="Items" index="2"]
+
+editor/display_folded = true
+position = Vector2( 49.6318, 151.482 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+item = null
+vivo = null
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Items/Queso" index="0"]
+
+position = Vector2( 4374.69, -1723.84 )
+frames = SubResource( 1 )
+animation = "crowbar"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/Queso" index="1"]
+
+position = Vector2( -1.95071, -1.95071 )
+shape = SubResource( 2 )
+
+[node name="Agua3" type="StaticBody2D" parent="Items" index="3" groups=[
+"items",
+] instance=ExtResource( 8 )]
+
+position = Vector2( -605.277, 573.521 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Agua4" type="StaticBody2D" parent="Items" index="4" groups=[
+"items",
+] instance=ExtResource( 8 )]
+
+position = Vector2( -824.685, 122.401 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Contenedor" type="Node" parent="." index="3"]
+
+[node name="Cofre_ganzua" type="Area2D" parent="Contenedor" index="0"]
+
+editor/display_folded = true
+position = Vector2( -724.801, 124.911 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
+vivo = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedor/Cofre_ganzua" index="0"]
+
+frames = SubResource( 3 )
+animation = "cofre"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Contenedor/Cofre_ganzua" index="1"]
+
+position = Vector2( -0.315559, 4.73338 )
+shape = SubResource( 4 )
+
+[node name="raton" type="Area2D" parent="Contenedor" index="1"]
+
+editor/display_folded = true
+position = Vector2( 2856.58, -225.879 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+item = null
+vivo = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedor/raton" index="0"]
+
+frames = SubResource( 5 )
+animation = "raton"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Contenedor/raton" index="1"]
+
+position = Vector2( -0.315559, 4.73338 )
+shape = SubResource( 6 )
+
+[node name="mesada" type="Area2D" parent="Contenedor" index="2"]
+
+editor/display_folded = true
+position = Vector2( 4381.03, 574.794 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+item = null
+vivo = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedor/mesada" index="0"]
+
+position = Vector2( 22.0215, -22.0215 )
+scale = Vector2( 1.88086, 1.88086 )
+frames = SubResource( 5 )
+animation = "mesada"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Contenedor/mesada" index="1"]
+
+position = Vector2( -0.315559, 4.73338 )
+shape = SubResource( 6 )
+
+[node name="heladeraAbajo" type="Area2D" parent="Contenedor" index="3"]
+
+editor/display_folded = true
+position = Vector2( 4400.9, -245.013 )
+scale = Vector2( 1.8084, 1.8084 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+item = null
+vivo = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedor/heladeraAbajo" index="0"]
+
+frames = SubResource( 5 )
+animation = "heladera"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Contenedor/heladeraAbajo" index="1"]
+
+position = Vector2( -0.315559, 4.73338 )
+shape = SubResource( 6 )
+
+[node name="heladeraArriba" type="Area2D" parent="Contenedor" index="4"]
+
+editor/display_folded = true
+position = Vector2( 4400.27, -327.803 )
+scale = Vector2( 1.81269, 1.81269 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+item = null
+vivo = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedor/heladeraArriba" index="0"]
+
+frames = SubResource( 5 )
+animation = "heladera_ar"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Contenedor/heladeraArriba" index="1"]
+
+position = Vector2( -0.315559, 4.73338 )
+shape = SubResource( 6 )
+
+[node name="armario_moneda" type="Area2D" parent="Contenedor" index="5"]
+
+editor/display_folded = true
+position = Vector2( 2772.54, -77.2467 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+item = null
+vivo = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedor/armario_moneda" index="0"]
+
+position = Vector2( -24.366, -24.366 )
+scale = Vector2( 1.97464, 1.97464 )
+frames = SubResource( 5 )
+animation = "armario"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Contenedor/armario_moneda" index="1"]
+
+position = Vector2( -0.315559, 4.73338 )
+shape = SubResource( 6 )
+
+[node name="Botellas" type="Node" parent="." index="4"]
+
+editor/display_folded = true
+
+[node name="Botella" type="StaticBody2D" parent="Botellas" index="0" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( -673.716, -222.977 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella11" type="StaticBody2D" parent="Botellas" index="1" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 973.806, 22.7198 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella17" type="StaticBody2D" parent="Botellas" index="2" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3328.7, 226.134 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella16" type="StaticBody2D" parent="Botellas" index="3" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 928.03, 24.0466 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella12" type="StaticBody2D" parent="Botellas" index="4" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 973.806, -229.006 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella13" type="StaticBody2D" parent="Botellas" index="5" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 1426.01, 73.9694 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella14" type="StaticBody2D" parent="Botellas" index="6" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 524.619, 224.703 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella15" type="StaticBody2D" parent="Botellas" index="7" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 1627.99, -225.991 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella2" type="StaticBody2D" parent="Botellas" index="8" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( -824.434, -172.437 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella3" type="StaticBody2D" parent="Botellas" index="9" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3774.78, -1369.54 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella10" type="StaticBody2D" parent="Botellas" index="10" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 4422.98, -1073.7 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella4" type="StaticBody2D" parent="Botellas" index="11" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3273.04, -1372.53 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella5" type="StaticBody2D" parent="Botellas" index="12" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2776.09, -1371.94 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella6" type="StaticBody2D" parent="Botellas" index="13" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2974.27, -1072.57 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella18" type="StaticBody2D" parent="Botellas" index="14" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 4372.81, -1623.06 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella19" type="StaticBody2D" parent="Botellas" index="15" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3528.93, -479.381 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella20" type="StaticBody2D" parent="Botellas" index="16" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3090.34, -227.697 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella21" type="StaticBody2D" parent="Botellas" index="17" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3926.82, -627.43 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella22" type="StaticBody2D" parent="Botellas" index="18" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3527.08, -877.263 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella23" type="StaticBody2D" parent="Botellas" index="19" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3225.43, -677.397 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella24" type="StaticBody2D" parent="Botellas" index="20" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3873.15, 22.1367 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella25" type="StaticBody2D" parent="Botellas" index="21" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3001.51, 220.153 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella26" type="StaticBody2D" parent="Botellas" index="22" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2729.47, 223.854 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella27" type="StaticBody2D" parent="Botellas" index="23" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2781.28, 225.705 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella28" type="StaticBody2D" parent="Botellas" index="24" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2834.95, 222.003 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella29" type="StaticBody2D" parent="Botellas" index="25" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3921.26, -24.1287 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella30" type="StaticBody2D" parent="Botellas" index="26" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 369.854, -175.581 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella32" type="StaticBody2D" parent="Botellas" index="27" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( -223.623, -234.278 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella9" type="StaticBody2D" parent="Botellas" index="28" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2775.49, -1073.17 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella7" type="StaticBody2D" parent="Botellas" index="29" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3174.85, -1070.77 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella8" type="StaticBody2D" parent="Botellas" index="30" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3376.02, -1071.97 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella31" type="StaticBody2D" parent="Botellas" index="31" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3000.86, 576.316 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella33" type="StaticBody2D" parent="Botellas" index="32" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2722.26, 574.845 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella34" type="StaticBody2D" parent="Botellas" index="33" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2854.57, 576.315 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella35" type="StaticBody2D" parent="Botellas" index="34" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3921.77, 374.332 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella36" type="StaticBody2D" parent="Botellas" index="35" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 4217.21, 567.271 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella37" type="StaticBody2D" parent="Botellas" index="36" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3362.55, 567.271 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella38" type="StaticBody2D" parent="Botellas" index="37" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3651.96, 573.301 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella39" type="StaticBody2D" parent="Botellas" index="38" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 3374.61, -222.575 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella40" type="StaticBody2D" parent="Botellas" index="39" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2727.07, -527.032 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella41" type="StaticBody2D" parent="Botellas" index="40" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2095.43, 570.379 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella42" type="StaticBody2D" parent="Botellas" index="41" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 1695.55, 574.923 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella43" type="StaticBody2D" parent="Botellas" index="42" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 2447.6, 568.107 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella44" type="StaticBody2D" parent="Botellas" index="43" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 818.525, 563.563 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella45" type="StaticBody2D" parent="Botellas" index="44" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 309.581, 565.835 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella46" type="StaticBody2D" parent="Botellas" index="45" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( -163.011, 565.835 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella48" type="StaticBody2D" parent="Botellas" index="46" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( 80.1013, 565.835 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Botella47" type="StaticBody2D" parent="Botellas" index="47" groups=[
+"items",
+] instance=ExtResource( 33 )]
+
+position = Vector2( -553.807, 573.466 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 34 )
+
+[node name="Puerta" type="Area2D" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 2526.88, -450.083 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_group_": true
+}
+item1 = null
+item2 = null
+cerrado = null
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Puerta" index="0"]
+
+position = Vector2( -0.487549, 0.487671 )
+frames = SubResource( 7 )
+animation = "puerta_banio"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta" index="1"]
+
+shape = SubResource( 8 )
+
+[node name="Kin_Pj" type="KinematicBody2D" parent="." index="6" groups=[
+"player",
+] instance=ExtResource( 38 )]
+
+position = Vector2( -735, 539 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 39 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Puerta2" type="Area2D" parent="." index="7"]
+
+position = Vector2( -857.1, 521.923 )
+scale = Vector2( 1.28644, 1.50587 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 40 )
+item1 = null
+item2 = null
+cerrado = null
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Puerta2" index="0"]
+
+position = Vector2( -14.2591, 1.29544 )
+frames = SubResource( 9 )
+animation = "puerta_casa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta2" index="1"]
+
+position = Vector2( -5.48288, 3.05176e-05 )
+scale = Vector2( 1.13357, 1 )
+shape = SubResource( 10 )
+
+[connection signal="body_entered" from="Items/Queso" to="Items/Queso" method="_on_Item_piso_body_entered"]
+
+[connection signal="body_exited" from="Items/Queso" to="Items/Queso" method="_on_Item_piso_body_exited"]
+
+[connection signal="body_entered" from="Contenedor/Cofre_ganzua" to="Contenedor/Cofre_ganzua" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedor/Cofre_ganzua" to="Contenedor/Cofre_ganzua" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Contenedor/raton" to="Contenedor/raton" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedor/raton" to="Contenedor/raton" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Contenedor/mesada" to="Contenedor/mesada" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedor/mesada" to="Contenedor/mesada" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Contenedor/heladeraAbajo" to="Contenedor/heladeraAbajo" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedor/heladeraAbajo" to="Contenedor/heladeraAbajo" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Contenedor/heladeraArriba" to="Contenedor/heladeraArriba" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedor/heladeraArriba" to="Contenedor/heladeraArriba" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Contenedor/armario_moneda" to="Contenedor/armario_moneda" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedor/armario_moneda" to="Contenedor/armario_moneda" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Puerta" to="Puerta" method="_on_Puerta_body_entered"]
+
+[connection signal="body_exited" from="Puerta" to="Puerta" method="_on_Puerta_body_exited"]
+
+[connection signal="body_entered" from="Puerta2" to="Puerta2" method="_on_Puerta_body_entered"]
+
+
