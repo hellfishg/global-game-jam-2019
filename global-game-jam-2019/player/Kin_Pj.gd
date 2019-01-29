@@ -155,6 +155,7 @@ func tomarAlcohol():
 	print("tomar!!")
 	
 
+
 ###################################
 
 ##salida al nivel 2:

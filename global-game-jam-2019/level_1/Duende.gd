@@ -1,6 +1,5 @@
 extends Area2D
 
-export(String) var item
 var tocado = false
 export (bool) var vivo
 var pj
@@ -26,10 +25,17 @@ func _on_Contenedor_body_exited(body):
 		text_actual = null
 	print("no_tocado")
 
-func _on_Kin_Pj_accion():		
-	if text_actual == null:
-		speak("¿Quién hubiera esperado que había alcohol al final del arcoiris?")
-
+func _on_Kin_Pj_accion():	
+	if text_actual == null && tocado:
+		if vivo:
+			if pj.inv_slot[pj.inv_puntero] == "moneda":
+				speak("¡Gracias! Ya no necesitaré esta barreta.")
+				pj.inv_slot[pj.inv_puntero] = "crowbar"
+			else:
+				speak("Al final de este arcoiris no hay ningún tesoro. Sólo hay botellas de alcohol. Decepcionante.")
+		if vivo == false:
+			speak("¿Quién hubiera imaginado que al final del arcoiris sólo habría alcohol?")
+		
 			
 func speak(text):
 	var container_text = load("res://alphaTest/Label.tscn").instance()
