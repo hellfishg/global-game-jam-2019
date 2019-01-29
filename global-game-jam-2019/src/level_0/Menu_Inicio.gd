@@ -25,3 +25,10 @@ func _process(delta):
 			get_tree().change_scene("res://level_0/Controles.tscn")
 		if boton == "ab":
 			get_tree().quit()
+
+func _on_inicio_pressed():
+	get_tree().change_scene("res://level_0/Controles.tscn")
+
+
+func _on_salir_pressed():
+	get_tree().quit()

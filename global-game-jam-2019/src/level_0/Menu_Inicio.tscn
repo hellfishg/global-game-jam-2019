@@ -79,4 +79,8 @@ autoplay = true
 mix_target = 0
 bus = "Master"
 
+[connection signal="pressed" from="inicio" to="." method="_on_inicio_pressed"]
+
+[connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]
+
 
