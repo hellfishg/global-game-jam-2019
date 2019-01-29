@@ -39,9 +39,16 @@ func _on_Kin_Pj_accion():
 		if item == "botella" && lleno:
 			#toma alcohol
 			print("toma alcohol!!")
+			vivo = false
+			lleno = false
+			
+		if item == "agua":
+			if pj.alcoholEnSangre > 0:
+				print("toma agua")
+				pj.alcoholEnSangre -= 1
+				vivo = false
+				lleno = false
+			
 		
 		print(pj.inv_slot)
 		
-
-
-

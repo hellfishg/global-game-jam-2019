@@ -5,7 +5,7 @@
 [ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Items/Agua.tscn" type="PackedScene" id=4]
 
-[node name="TestArea" type="Node" index="0"]
+[node name="TestArea" type="Node"]
 
 [node name="Kin_Pj" parent="." index="0" instance=ExtResource( 1 )]
 

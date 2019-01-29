@@ -1,59 +1,61 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://bgm/patio2.jpg" type="Texture" id=1]
 [ext_resource path="res://bgm/patio1.jpg" type="Texture" id=2]
 [ext_resource path="res://bgm/patio3.jpg" type="Texture" id=3]
 [ext_resource path="res://tilsets/Tilset.tres" type="TileSet" id=4]
 [ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Items/Agua.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Item_piso.gd" type="Script" id=7]
-[ext_resource path="res://images/lootLlaveGanzuaImprovisada3.png" type="Texture" id=8]
-[ext_resource path="res://images/lootLlaveGanzuaImprovisada.png" type="Texture" id=9]
-[ext_resource path="res://images/lootLlaveGanzuaImprovisada2.png" type="Texture" id=10]
-[ext_resource path="res://images/lootLlaveCrowbar3.png" type="Texture" id=11]
-[ext_resource path="res://images/lootLlaveCrowbar1.png" type="Texture" id=12]
-[ext_resource path="res://images/lootLlaveCrowbar2.png" type="Texture" id=13]
-[ext_resource path="res://images/lootLlaveRoca3.png" type="Texture" id=14]
-[ext_resource path="res://images/lootLlaveRoca.png" type="Texture" id=15]
-[ext_resource path="res://images/lootLlaveRoca2.png" type="Texture" id=16]
-[ext_resource path="res://images/lootLlave1.png" type="Texture" id=17]
-[ext_resource path="res://images/lootLlave3.png" type="Texture" id=18]
-[ext_resource path="res://images/lootLlave2.png" type="Texture" id=19]
-[ext_resource path="res://Items/Contenedor.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Items/Contenedor.gd" type="Script" id=21]
-[ext_resource path="res://images/cofre.png" type="Texture" id=22]
-[ext_resource path="res://images/raton.png" type="Texture" id=23]
-[ext_resource path="res://images/leprechaun.png" type="Texture" id=24]
-[ext_resource path="res://images/maceta.png" type="Texture" id=25]
-[ext_resource path="res://images/heladeraAbajo.png" type="Texture" id=26]
-[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=27]
-[ext_resource path="res://images/armario.png" type="Texture" id=28]
-[ext_resource path="res://images/mesada.png" type="Texture" id=29]
-[ext_resource path="res://level_1/Duende.gd" type="Script" id=30]
-[ext_resource path="res://Exits/Puerta.gd" type="Script" id=31]
-[ext_resource path="res://images/puertaBaño.png" type="Texture" id=32]
-[ext_resource path="res://images/puertaCasa.png" type="Texture" id=33]
-[ext_resource path="res://player/Kin_Pj.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Items/Botella.gd" type="Script" id=6]
+[ext_resource path="res://Items/Agua.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Agua.gd" type="Script" id=8]
+[ext_resource path="res://Item_piso.gd" type="Script" id=9]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada3.png" type="Texture" id=10]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada.png" type="Texture" id=11]
+[ext_resource path="res://images/lootLlaveGanzuaImprovisada2.png" type="Texture" id=12]
+[ext_resource path="res://images/lootLlaveCrowbar3.png" type="Texture" id=13]
+[ext_resource path="res://images/lootLlaveCrowbar1.png" type="Texture" id=14]
+[ext_resource path="res://images/lootLlaveCrowbar2.png" type="Texture" id=15]
+[ext_resource path="res://images/lootLlaveRoca3.png" type="Texture" id=16]
+[ext_resource path="res://images/lootLlaveRoca.png" type="Texture" id=17]
+[ext_resource path="res://images/lootLlaveRoca2.png" type="Texture" id=18]
+[ext_resource path="res://images/lootLlave1.png" type="Texture" id=19]
+[ext_resource path="res://images/lootLlave3.png" type="Texture" id=20]
+[ext_resource path="res://images/lootLlave2.png" type="Texture" id=21]
+[ext_resource path="res://Items/Contenedor.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Items/Contenedor.gd" type="Script" id=23]
+[ext_resource path="res://images/heladeraAbajo.png" type="Texture" id=24]
+[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=25]
+[ext_resource path="res://images/armario.png" type="Texture" id=26]
+[ext_resource path="res://images/mesada.png" type="Texture" id=27]
+[ext_resource path="res://images/cofre.png" type="Texture" id=28]
+[ext_resource path="res://images/raton.png" type="Texture" id=29]
+[ext_resource path="res://images/leprechaun.png" type="Texture" id=30]
+[ext_resource path="res://images/maceta.png" type="Texture" id=31]
+[ext_resource path="res://Exits/Puerta.gd" type="Script" id=32]
+[ext_resource path="res://images/puertaBaño.png" type="Texture" id=33]
+[ext_resource path="res://images/puertaCasa.png" type="Texture" id=34]
+[ext_resource path="res://player/Kin_Pj.tscn" type="PackedScene" id=35]
+[ext_resource path="res://player/Kin_Pj.gd" type="Script" id=36]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "clip",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "crowbar",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "roca",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "llave",
 "speed": 2.0
@@ -67,44 +69,44 @@ extents = Vector2( 24.4264, 26.0299 )
 [sub_resource type="SpriteFrames" id=3]
 
 animations = [ {
-"frames": [ ExtResource( 22 ) ],
-"loop": true,
-"name": "cofre",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 23 ) ],
-"loop": true,
-"name": "raton",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 24 ) ],
-"loop": true,
-"name": "duende",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 25 ) ],
-"loop": true,
-"name": "maceta",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 26 ) ],
 "loop": true,
 "name": "heladera",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ) ],
+"frames": [ ExtResource( 25 ) ],
 "loop": true,
 "name": "heladera_ar",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 28 ) ],
+"frames": [ ExtResource( 26 ) ],
 "loop": true,
 "name": "armario",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 29 ) ],
+"frames": [ ExtResource( 27 ) ],
 "loop": true,
 "name": "mesada",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "cofre",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "raton",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ) ],
+"loop": true,
+"name": "duende",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "maceta",
 "speed": 5.0
 } ]
 
@@ -116,12 +118,12 @@ extents = Vector2( 26.7875, 21.7845 )
 [sub_resource type="SpriteFrames" id=5]
 
 animations = [ {
-"frames": [ ExtResource( 32 ) ],
+"frames": [ ExtResource( 33 ) ],
 "loop": true,
 "name": "puerta_banio",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 33 ) ],
+"frames": [ ExtResource( 34 ) ],
 "loop": true,
 "name": "puerta_casa",
 "speed": 5.0
@@ -130,14 +132,17 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 90.178, 176.361 )
+extents = Vector2( 26.1147, 51.4663 )
 
-[node name="level1_final" type="Node" index="0"]
+[node name="level1_final" type="Node" index="1"]
 
 [node name="Background" type="Node" parent="." index="0"]
 
+editor/display_folded = true
+
 [node name="Arcoiris1" type="Sprite" parent="Background" index="0"]
 
+visible = false
 position = Vector2( 1467.07, -1253.41 )
 rotation = 0.000616956
 scale = Vector2( 1.03126, 1.02976 )
@@ -148,6 +153,7 @@ __meta__ = {
 
 [node name="Arcoiris2" type="Sprite" parent="Background" index="1"]
 
+visible = false
 position = Vector2( 3298.49, -1252.52 )
 rotation = 0.000616956
 scale = Vector2( 1.03126, 1.02976 )
@@ -161,6 +167,7 @@ __meta__ = {
 
 [node name="Inicio" type="Sprite" parent="Background" index="2"]
 
+visible = false
 position = Vector2( 1466.98, -47.8553 )
 texture = ExtResource( 2 )
 __meta__ = {
@@ -169,6 +176,7 @@ __meta__ = {
 
 [node name="Casa" type="Sprite" parent="Background" index="3"]
 
+visible = false
 position = Vector2( 3257.13, -80.0786 )
 texture = ExtResource( 3 )
 __meta__ = {
@@ -177,6 +185,7 @@ __meta__ = {
 
 [node name="Background1" type="Sprite" parent="Background" index="4"]
 
+visible = false
 position = Vector2( 5023.25, -1233.54 )
 rotation = 0.000616956
 scale = Vector2( 1.03126, 1.02976 )
@@ -187,6 +196,7 @@ __meta__ = {
 
 [node name="Background2" type="Sprite" parent="Background" index="5"]
 
+visible = false
 position = Vector2( 5023.99, -28.2605 )
 texture = ExtResource( 2 )
 __meta__ = {
@@ -195,6 +205,7 @@ __meta__ = {
 
 [node name="Background3" type="Sprite" parent="Background" index="6"]
 
+visible = false
 position = Vector2( -416.113, -277.544 )
 texture = ExtResource( 2 )
 __meta__ = {
@@ -203,6 +214,7 @@ __meta__ = {
 
 [node name="Background4" type="Sprite" parent="Background" index="7"]
 
+visible = false
 position = Vector2( -494.613, -1293.44 )
 rotation = 0.000616956
 scale = Vector2( 1.03126, 1.02976 )
@@ -242,144 +254,478 @@ __meta__ = {
 
 editor/display_folded = true
 
-[node name="Botella" parent="Botellas" index="0" instance=ExtResource( 5 )]
+[node name="Botella" type="StaticBody2D" parent="Botellas" index="0" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 1327.52, 177.966 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella2" parent="Botellas" index="1" instance=ExtResource( 5 )]
+[node name="Botella2" type="StaticBody2D" parent="Botellas" index="1" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 1677.3, -120.604 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella3" parent="Botellas" index="2" instance=ExtResource( 5 )]
+[node name="Botella3" type="StaticBody2D" parent="Botellas" index="2" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 2475.49, -372.31 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella4" parent="Botellas" index="3" instance=ExtResource( 5 )]
+[node name="Botella4" type="StaticBody2D" parent="Botellas" index="3" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 2725.95, -622.768 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella5" parent="Botellas" index="4" instance=ExtResource( 5 )]
+[node name="Botella5" type="StaticBody2D" parent="Botellas" index="4" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 3171.62, -625.224 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella6" parent="Botellas" index="5" instance=ExtResource( 5 )]
+[node name="Botella6" type="StaticBody2D" parent="Botellas" index="5" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 3679.9, -723.443 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella7" parent="Botellas" index="6" instance=ExtResource( 5 )]
+[node name="Botella7" type="StaticBody2D" parent="Botellas" index="6" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 3725.33, -724.67 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella8" parent="Botellas" index="7" instance=ExtResource( 5 )]
+[node name="Botella8" type="StaticBody2D" parent="Botellas" index="7" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 3978.24, -826.572 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella9" parent="Botellas" index="8" instance=ExtResource( 5 )]
+[node name="Botella9" type="StaticBody2D" parent="Botellas" index="8" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 3978.24, -873.226 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella10" parent="Botellas" index="9" instance=ExtResource( 5 )]
+[node name="Botella10" type="StaticBody2D" parent="Botellas" index="9" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 3823.9, -1422.46 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella11" parent="Botellas" index="10" instance=ExtResource( 5 )]
+[node name="Botella11" type="StaticBody2D" parent="Botellas" index="10" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 3127.42, -1181.39 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella12" parent="Botellas" index="11" instance=ExtResource( 5 )]
+[node name="Botella12" type="StaticBody2D" parent="Botellas" index="11" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 2619.14, -1224.36 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella13" parent="Botellas" index="12" instance=ExtResource( 5 )]
+[node name="Botella13" type="StaticBody2D" parent="Botellas" index="12" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 2073.13, -1024.91 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella14" parent="Botellas" index="13" instance=ExtResource( 5 )]
+[node name="Botella14" type="StaticBody2D" parent="Botellas" index="13" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 2272.58, -1024.91 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella15" parent="Botellas" index="14" instance=ExtResource( 5 )]
+[node name="Botella15" type="StaticBody2D" parent="Botellas" index="14" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 674.064, -487.397 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella16" parent="Botellas" index="15" instance=ExtResource( 5 )]
+[node name="Botella16" type="StaticBody2D" parent="Botellas" index="15" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 575.579, -577.586 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella17" parent="Botellas" index="16" instance=ExtResource( 5 )]
+[node name="Botella17" type="StaticBody2D" parent="Botellas" index="16" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 572.985, -675.296 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella18" parent="Botellas" index="17" instance=ExtResource( 5 )]
+[node name="Botella18" type="StaticBody2D" parent="Botellas" index="17" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 575.915, -776.139 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella19" parent="Botellas" index="18" instance=ExtResource( 5 )]
+[node name="Botella19" type="StaticBody2D" parent="Botellas" index="18" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 576.255, -881.384 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella20" parent="Botellas" index="19" instance=ExtResource( 5 )]
+[node name="Botella20" type="StaticBody2D" parent="Botellas" index="19" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 574.248, -974.784 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella21" parent="Botellas" index="20" instance=ExtResource( 5 )]
+[node name="Botella21" type="StaticBody2D" parent="Botellas" index="20" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 577.243, -487.502 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella23" parent="Botellas" index="21" instance=ExtResource( 5 )]
+[node name="Botella23" type="StaticBody2D" parent="Botellas" index="21" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 672.968, -577.233 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella24" parent="Botellas" index="22" instance=ExtResource( 5 )]
+[node name="Botella24" type="StaticBody2D" parent="Botellas" index="22" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 670.978, -674.354 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella25" parent="Botellas" index="23" instance=ExtResource( 5 )]
+[node name="Botella25" type="StaticBody2D" parent="Botellas" index="23" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 677.693, -782.123 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella26" parent="Botellas" index="24" instance=ExtResource( 5 )]
+[node name="Botella26" type="StaticBody2D" parent="Botellas" index="24" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 672.498, -871.93 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella27" parent="Botellas" index="25" instance=ExtResource( 5 )]
+[node name="Botella27" type="StaticBody2D" parent="Botellas" index="25" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 674.764, -974.117 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella28" parent="Botellas" index="26" instance=ExtResource( 5 )]
+[node name="Botella28" type="StaticBody2D" parent="Botellas" index="26" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 726.432, -1073.82 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella29" parent="Botellas" index="27" instance=ExtResource( 5 )]
+[node name="Botella29" type="StaticBody2D" parent="Botellas" index="27" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 774.565, -1073.44 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella30" parent="Botellas" index="28" instance=ExtResource( 5 )]
+[node name="Botella30" type="StaticBody2D" parent="Botellas" index="28" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 824.672, -1074.14 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella31" parent="Botellas" index="29" instance=ExtResource( 5 )]
+[node name="Botella31" type="StaticBody2D" parent="Botellas" index="29" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 874.355, -1073.53 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella32" parent="Botellas" index="30" instance=ExtResource( 5 )]
+[node name="Botella32" type="StaticBody2D" parent="Botellas" index="30" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 925.255, -1074.89 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Botella33" parent="Botellas" index="31" instance=ExtResource( 5 )]
+[node name="Botella33" type="StaticBody2D" parent="Botellas" index="31" groups=[
+"items",
+] instance=ExtResource( 5 )]
 
 position = Vector2( 972.558, -1074.8 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 6 )
 
-[node name="Agua" parent="Botellas" index="32" instance=ExtResource( 6 )]
+[node name="Agua" type="StaticBody2D" parent="Botellas" index="32" groups=[
+"items",
+] instance=ExtResource( 7 )]
 
 position = Vector2( 729.547, -327.999 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Items" type="Node" parent="." index="3"]
 
 [node name="Roca" type="Area2D" parent="Items" index="0"]
 
 editor/display_folded = true
-position = Vector2( 3629.28, -726.897 )
+position = Vector2( 3024.02, 275.461 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -387,7 +733,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 7 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -407,15 +753,39 @@ shape = SubResource( 2 )
 
 [node name="Contenedores" type="Node" parent="." index="4"]
 
-[node name="Mac_llave" parent="Contenedores" index="0" instance=ExtResource( 20 )]
+[node name="Mac_llave" type="Area2D" parent="Contenedores" index="0" instance=ExtResource( 22 )]
 
 position = Vector2( 2275.72, -123.522 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
 item = "llave"
+vivo = true
 
-[node name="Mac_agua" parent="Contenedores" index="1" instance=ExtResource( 20 )]
+[node name="Mac_agua" type="Area2D" parent="Contenedores" index="1" instance=ExtResource( 22 )]
 
-position = Vector2( 3971.57, 274.732 )
+position = Vector2( 3817.85, 356.354 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_group_": true
+}
 item = "agua"
+vivo = true
 
 [node name="Cofre" type="Area2D" parent="Contenedores" index="2"]
 
@@ -428,11 +798,11 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 21 )
+script = ExtResource( 23 )
 __meta__ = {
 "_edit_group_": true
 }
-item = "botella"
+item = null
 vivo = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedores/Cofre" index="0"]
@@ -456,10 +826,11 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 30 )
+script = ExtResource( 23 )
 __meta__ = {
 "_edit_group_": true
 }
+item = null
 vivo = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Contenedores/Duende" index="0"]
@@ -474,9 +845,8 @@ shape = SubResource( 4 )
 
 [node name="Puerta" type="Area2D" parent="." index="5"]
 
-editor/display_folded = true
-position = Vector2( 3246.86, 127.888 )
-scale = Vector2( 1.28616, 1.28616 )
+position = Vector2( 3248.2, 109.788 )
+scale = Vector2( 3.8714, 3.8714 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -484,40 +854,46 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-script = ExtResource( 31 )
+script = ExtResource( 32 )
 __meta__ = {
-"_edit_lock_": true
+"_edit_group_": true
 }
-item1 = "roca"
+item1 = null
 item2 = null
-cerrado = "true"
+cerrado = null
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Puerta" index="0"]
 
-position = Vector2( 0.13762, -24.0248 )
-scale = Vector2( 3.52332, 3.12503 )
 frames = SubResource( 5 )
 animation = "puerta_casa"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Puerta" index="1"]
 
-position = Vector2( 0, -23.2267 )
-scale = Vector2( 1, 0.870504 )
 shape = SubResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="Kin_Pj" parent="." index="6" instance=ExtResource( 34 )]
+[node name="Kin_Pj" type="KinematicBody2D" parent="." index="6" groups=[
+"player",
+] instance=ExtResource( 35 )]
 
-position = Vector2( 602.743, 205.471 )
+position = Vector2( 3078.07, 235.208 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 36 )
+_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="Items/Roca" to="Items/Roca" method="_on_Item_piso_body_entered"]
 
 [connection signal="body_exited" from="Items/Roca" to="Items/Roca" method="_on_Item_piso_body_exited"]
+
+[connection signal="body_entered" from="Contenedores/Mac_llave" to="Contenedores/Mac_llave" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedores/Mac_llave" to="Contenedores/Mac_llave" method="_on_Contenedor_body_exited"]
+
+[connection signal="body_entered" from="Contenedores/Mac_agua" to="Contenedores/Mac_agua" method="_on_Contenedor_body_entered"]
+
+[connection signal="body_exited" from="Contenedores/Mac_agua" to="Contenedores/Mac_agua" method="_on_Contenedor_body_exited"]
 
 [connection signal="body_entered" from="Contenedores/Cofre" to="Contenedores/Cofre" method="_on_Contenedor_body_entered"]
 
@@ -531,16 +907,12 @@ position = Vector2( 602.743, 205.471 )
 
 [connection signal="body_exited" from="Puerta" to="Puerta" method="_on_Puerta_body_exited"]
 
-[connection signal="accion" from="Kin_Pj" to="Contenedores/Cofre" method="_on_Kin_Pj_accion"]
+[connection signal="accion" from="Kin_Pj" to="Items/Roca" method="_on_Kin_Pj_accion"]
 
 [connection signal="accion" from="Kin_Pj" to="Contenedores/Mac_llave" method="_on_Kin_Pj_accion"]
 
-[connection signal="accion" from="Kin_Pj" to="Puerta" method="_on_Kin_Pj_accion"]
-
 [connection signal="accion" from="Kin_Pj" to="Contenedores/Mac_agua" method="_on_Kin_Pj_accion"]
 
-[connection signal="accion" from="Kin_Pj" to="Items/Roca" method="_on_Kin_Pj_accion"]
-
-[connection signal="accion" from="Kin_Pj" to="Contenedores/Duende" method="_on_Kin_Pj_accion"]
+[connection signal="accion" from="Kin_Pj" to="Contenedores/Cofre" method="_on_Kin_Pj_accion"]
 
 
