@@ -1,13 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Items/Botella.gd" type="Script" id=1]
-[ext_resource path="res://images/lootBotella1.png" type="Texture" id=2]
-[ext_resource path="res://images/lootBotella2.png" type="Texture" id=3]
+[ext_resource path="res://Items/Agua.gd" type="Script" id=1]
+[ext_resource path="res://images/lootVaso2.png" type="Texture" id=2]
+[ext_resource path="res://images/lootVaso3.png" type="Texture" id=3]
+[ext_resource path="res://images/lootVaso1.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "default",
 "speed": 2.0
@@ -18,7 +19,7 @@ animations = [ {
 custom_solver_bias = 0.0
 extents = Vector2( 24.2993, 23.3414 )
 
-[node name="Botella" type="StaticBody2D" groups=[
+[node name="Agua" type="StaticBody2D" index="0" groups=[
 "items",
 ]]
 
@@ -30,12 +31,13 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
 
 frames = SubResource( 1 )
 animation = "default"
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]

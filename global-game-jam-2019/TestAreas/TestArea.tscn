@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player/Kin_Pj.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tilsets/Tilset.tres" type="TileSet" id=2]
 [ext_resource path="res://Items/Botella.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/Agua.tscn" type="PackedScene" id=4]
 
 [node name="TestArea" type="Node" index="0"]
 
@@ -36,5 +37,17 @@ position = Vector2( 303.973, 564.522 )
 [node name="Botella2" parent="." index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 220.464, 562.852 )
+
+[node name="Botella3" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 496.044, 562.851 )
+
+[node name="Botella4" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 404.184, 557.841 )
+
+[node name="Agua" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 855.133, 567.862 )
 
 

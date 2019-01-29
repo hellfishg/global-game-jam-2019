@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://player/Kin_Pj.gd" type="Script" id=1]
 [ext_resource path="res://images/jugadorLateral1.png" type="Texture" id=2]
@@ -18,9 +18,12 @@
 [ext_resource path="res://images/inventarioVacio.png" type="Texture" id=16]
 [ext_resource path="res://images/inventarioRoca.png" type="Texture" id=17]
 [ext_resource path="res://images/inventarioLlave.png" type="Texture" id=18]
-[ext_resource path="res://imagesAlpha/pisMitad.png" type="Texture" id=19]
-[ext_resource path="res://imagesAlpha/pisVacio.png" type="Texture" id=20]
-[ext_resource path="res://imagesAlpha/pisLleno.png" type="Texture" id=21]
+[ext_resource path="res://images/vomito2.png" type="Texture" id=19]
+[ext_resource path="res://images/vomito0.png" type="Texture" id=20]
+[ext_resource path="res://images/vomito1.png" type="Texture" id=21]
+[ext_resource path="res://images/vomito3.png" type="Texture" id=22]
+[ext_resource path="res://images/vomito5.png" type="Texture" id=23]
+[ext_resource path="res://images/vomito4.png" type="Texture" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 
@@ -124,18 +127,28 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "1",
+"name": "0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "3",
+"name": "1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 22 ) ],
 "loop": true,
-"name": "todos",
+"name": "3",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
 } ]
 
 [node name="Kin_Pj" type="KinematicBody2D" groups=[
@@ -238,11 +251,8 @@ animation = "botella"
 
 [node name="BarraVomito" type="AnimatedSprite" parent="Barras/CanvasLayer" index="5"]
 
-position = Vector2( -11.7459, 0 )
-scale = Vector2( 0.112019, 0.556046 )
 frames = SubResource( 5 )
-animation = "todos"
-frame = 1
+animation = "0"
 playing = true
 _sections_unfolded = [ "Transform" ]
 

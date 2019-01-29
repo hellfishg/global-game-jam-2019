@@ -4,8 +4,7 @@ var speed = 350
 var jump_speed = 900
 var gravity = 1300
 
-var cont = 0
-var text_actual = null
+#var text_actual = null
 
 var distance = Vector2()
 var velocity = Vector2()
@@ -60,10 +59,7 @@ func _move(delta):
 	if is_on_floor():
 		velocity.y = 0
 		direction.y = 0
-		
-#		if Input.is_action_just_pressed("saltar"):
-#			velocity.y = -jump_speed
-#			direction.y = 1
+
 		if Input.is_action_just_pressed("joy_salto"):
 			velocity.y = -jump_speed
 			direction.y = 1
@@ -79,13 +75,6 @@ func _move(delta):
 		if inv_slot[inv_puntero] == "botella":
 			inv_slot[inv_puntero] = "vacio"
 			tomarAlcohol()
-			
-			
-	#Crea señales accion:
-#	if Input.is_action_just_pressed("joy_accion"):
-#		print (str(get_node("../../itemCambio/item")))
-#		if get_node("../../itemCambio/item").tocado:
-#			emit_signal("accion")
 
 	if Input.is_action_just_pressed("joy_accion"):
 		emit_signal("accion")
@@ -113,6 +102,11 @@ func _move(delta):
 		if get_col.collider.is_in_group("items"):
 			var item = get_col.collider.item
 			
+			if item == "agua":
+				if alcoholEnSangre > 0:
+					alcoholEnSangre -= 1
+					get_col.collider.queue_free()
+			
 			if item == "botella":
 				var lleno = true
 				get_col.collider.queue_free()
@@ -130,7 +124,6 @@ func _move(delta):
 					
 				print(inv_slot)
 
-
 	actuliazar_menu()
 						
 func actuliazar_menu():
@@ -138,6 +131,7 @@ func actuliazar_menu():
 	$Barras/CanvasLayer/item2.animation = inv_slot[1]
 	$Barras/CanvasLayer/item3.animation = inv_slot[2]
 	$Barras/CanvasLayer/item4.animation = inv_slot[3]
+	$Barras/CanvasLayer/BarraVomito.animation = str(alcoholEnSangre)
 			
 func MenuPos():
 	var posAct = Vector2()
@@ -151,27 +145,18 @@ func MenuPos():
 	$Barras/CanvasLayer/item4.position += posAct
 	
 	posAct = Vector2()
-	posAct.x = 1345
+	posAct.x = 1265
 	posAct.y = 300
 	
 	$Barras/CanvasLayer/BarraVomito.position += posAct
 	
 func tomarAlcohol():
-	alcoholEnSangre -= 1
-	print("toma botella!!")
+	alcoholEnSangre += 1
+	print("tomar!!")
 	
 
 ###################################
-##Daños:
-#func damage():
-#	if get_slide_collision(get_slide_count()-1) != null: 
-#		var get_col = get_slide_collision(get_slide_count()-1)
-#		if get_col.collider.is_in_group("pichos"):
-#			print("auuchhh")
-#
-#
-#
-#
+
 ##salida al nivel 2:
 #func _on_exit_body_entered(body):
 #	get_tree().change_scene("res://nivel2/Level_2.tscn")
