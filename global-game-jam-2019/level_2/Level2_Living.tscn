@@ -143,6 +143,7 @@ extents = Vector2( 24.2993, 23.3414 )
 
 [node name="Sprite" type="Sprite" parent="Node" index="0"]
 
+visible = false
 position = Vector2( 678.342, 198.092 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
@@ -153,6 +154,7 @@ __meta__ = {
 
 [node name="Sprite2" type="Sprite" parent="Node" index="1"]
 
+visible = false
 position = Vector2( 2027.77, 195.503 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 2 )
@@ -163,6 +165,7 @@ __meta__ = {
 
 [node name="Sprite3" type="Sprite" parent="Node" index="2"]
 
+visible = false
 position = Vector2( 3418.23, -701.79 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
@@ -173,6 +176,7 @@ __meta__ = {
 
 [node name="Sprite4" type="Sprite" parent="Node" index="3"]
 
+visible = false
 position = Vector2( 3422.01, 198.928 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 4 )
@@ -183,18 +187,21 @@ __meta__ = {
 
 [node name="Sprite5" type="Sprite" parent="Node" index="4"]
 
+visible = false
 position = Vector2( 4939.36, -1143.48 )
 scale = Vector2( 0.764035, 0.764035 )
 texture = ExtResource( 5 )
 
 [node name="Sprite6" type="Sprite" parent="Node" index="5"]
 
+visible = false
 position = Vector2( 4409.63, 114.006 )
 scale = Vector2( 9.95966, 9.34199 )
 texture = ExtResource( 6 )
 
 [node name="Sprite7" type="Sprite" parent="Node" index="6"]
 
+visible = false
 position = Vector2( 6910.6, -827.558 )
 scale = Vector2( 4.32636, 4.32636 )
 texture = ExtResource( 7 )
@@ -203,6 +210,7 @@ _sections_unfolded = [ "Offset", "Region" ]
 
 [node name="Sprite8" type="Sprite" parent="Node" index="7"]
 
+visible = false
 position = Vector2( 7147.5, -653.09 )
 scale = Vector2( 0.451481, 0.451481 )
 texture = ExtResource( 8 )
@@ -237,6 +245,7 @@ __meta__ = {
 
 [node name="Contenedor3" type="Area2D" parent="." index="2"]
 
+editor/display_folded = true
 position = Vector2( 4000.68, 574.877 )
 scale = Vector2( 2.57253, 2.77742 )
 input_pickable = true
@@ -265,6 +274,7 @@ shape = SubResource( 2 )
 
 [node name="Contenedor4" type="Area2D" parent="." index="3"]
 
+editor/display_folded = true
 position = Vector2( 4000.68, 443.877 )
 scale = Vector2( 2.57253, 2.77742 )
 input_pickable = true
@@ -301,6 +311,7 @@ position = Vector2( 1770.61, -10.2743 )
 
 [node name="Contenedor2" type="Area2D" parent="." index="6"]
 
+editor/display_folded = true
 position = Vector2( 1527.98, 594.003 )
 scale = Vector2( 2.81147, 2.12789 )
 input_pickable = true
@@ -358,6 +369,7 @@ shape = SubResource( 2 )
 
 [node name="Raton" type="Area2D" parent="." index="8"]
 
+editor/display_folded = true
 position = Vector2( 2868.57, 23.8488 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
@@ -388,6 +400,7 @@ shape = SubResource( 2 )
 "items",
 ]]
 
+editor/display_folded = true
 position = Vector2( 2901.75, -1041.95 )
 input_pickable = false
 collision_layer = 1
@@ -426,6 +439,7 @@ area_mask = 1
 
 [node name="Duende" type="Area2D" parent="." index="12"]
 
+editor/display_folded = true
 position = Vector2( 5758.71, -900.032 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
