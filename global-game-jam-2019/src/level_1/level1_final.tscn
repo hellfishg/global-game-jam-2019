@@ -23,14 +23,14 @@
 [ext_resource path="res://images/lootLlave2.png" type="Texture" id=21]
 [ext_resource path="res://Items/Contenedor.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Items/Contenedor.gd" type="Script" id=23]
-[ext_resource path="res://images/heladeraAbajo.png" type="Texture" id=24]
-[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=25]
-[ext_resource path="res://images/armario.png" type="Texture" id=26]
-[ext_resource path="res://images/mesada.png" type="Texture" id=27]
-[ext_resource path="res://images/cofre.png" type="Texture" id=28]
-[ext_resource path="res://images/raton.png" type="Texture" id=29]
-[ext_resource path="res://images/leprechaun.png" type="Texture" id=30]
-[ext_resource path="res://images/maceta.png" type="Texture" id=31]
+[ext_resource path="res://images/heladeraArriba.png" type="Texture" id=24]
+[ext_resource path="res://images/armario.png" type="Texture" id=25]
+[ext_resource path="res://images/mesada.png" type="Texture" id=26]
+[ext_resource path="res://images/cofre.png" type="Texture" id=27]
+[ext_resource path="res://images/raton.png" type="Texture" id=28]
+[ext_resource path="res://images/leprechaun.png" type="Texture" id=29]
+[ext_resource path="res://images/maceta.png" type="Texture" id=30]
+[ext_resource path="res://images/heladeraAbajo.png" type="Texture" id=31]
 [ext_resource path="res://level_1/Duende.gd" type="Script" id=32]
 [ext_resource path="res://Exits/Puerta.gd" type="Script" id=33]
 [ext_resource path="res://images/puertaCasa.png" type="Texture" id=34]
@@ -82,42 +82,42 @@ extents = Vector2( 24.4264, 26.0299 )
 animations = [ {
 "frames": [ ExtResource( 24 ) ],
 "loop": true,
-"name": "heladera",
+"name": "heladera_ar",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ) ],
 "loop": true,
-"name": "heladera_ar",
+"name": "armario",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
-"name": "armario",
+"name": "mesada",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 27 ) ],
 "loop": true,
-"name": "mesada",
+"name": "cofre",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 28 ) ],
 "loop": true,
-"name": "cofre",
+"name": "raton",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 29 ) ],
 "loop": true,
-"name": "raton",
+"name": "duende",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 30 ) ],
 "loop": true,
-"name": "duende",
+"name": "maceta",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 31 ) ],
 "loop": true,
-"name": "maceta",
+"name": "heladera",
 "speed": 5.0
 } ]
 
@@ -556,16 +556,16 @@ area_mask = 1
 
 [connection signal="body_exited" from="Puerta" to="Puerta" method="_on_Puerta_body_exited"]
 
-[connection signal="accion" from="Kin_Pj" to="Puerta" method="_on_Kin_Pj_accion"]
-
-[connection signal="accion" from="Kin_Pj" to="Contenedores/Cofre" method="_on_Kin_Pj_accion"]
-
-[connection signal="accion" from="Kin_Pj" to="Contenedores/Mac_agua" method="_on_Kin_Pj_accion"]
-
-[connection signal="accion" from="Kin_Pj" to="Contenedores/Duende" method="_on_Kin_Pj_accion"]
+[connection signal="accion" from="Kin_Pj" to="Items/Roca" method="_on_Kin_Pj_accion"]
 
 [connection signal="accion" from="Kin_Pj" to="Contenedores/Mac_llave" method="_on_Kin_Pj_accion"]
 
-[connection signal="accion" from="Kin_Pj" to="Items/Roca" method="_on_Kin_Pj_accion"]
+[connection signal="accion" from="Kin_Pj" to="Contenedores/Mac_agua" method="_on_Kin_Pj_accion"]
+
+[connection signal="accion" from="Kin_Pj" to="Contenedores/Cofre" method="_on_Kin_Pj_accion"]
+
+[connection signal="accion" from="Kin_Pj" to="Contenedores/Duende" method="_on_Kin_Pj_accion"]
+
+[connection signal="accion" from="Kin_Pj" to="Puerta" method="_on_Kin_Pj_accion"]
 
 

@@ -31,6 +31,9 @@ func teleport(body):
 	get_node("/root/Global").alcoholEnSangre = body.alcoholEnSangre
 	get_node("/root/Global").level2_On = 1
 
+	var dir = Directory.new()
+	dir.remove("res://sceneSaveLevel2.tscn")
+
 	var packed_scene = PackedScene.new()
 	packed_scene.pack(get_tree().get_current_scene())
 	ResourceSaver.save("res://sceneSaveLevel2.tscn", packed_scene)
@@ -39,5 +42,4 @@ func teleport(body):
 
 
 
-func _on_Kin_Pj_accion():
-	pass # replace with function body
+

@@ -55,22 +55,24 @@ func teleport(body):
 	salida.x = 3000
 	salida.y = 250
 	body.position = salida
-#	get_node("../../scriptGlobal").inv_slot = body.inv_slot 
-#	get_node("../../scriptGlobal").inv_slot[0] = "pepe"
-#	print (get_node("../../scriptGlobal").inv_slot)
 
-	#get_node("/root/Global").inv_puntero = body.inv_puntero
 	get_node("/root/Global").inv_slot = body.inv_slot
 	get_node("/root/Global").alcoholEnSangre = body.alcoholEnSangre
+	
+	#borrar save:
+	var dir = Directory.new()
+	dir.remove("res://sceneSaveLevel1.tscn")
 	
 	var packed_scene = PackedScene.new()
 	packed_scene.pack(get_tree().get_current_scene())
 	ResourceSaver.save("res://sceneSaveLevel1.tscn", packed_scene)
+	
 	
 	#Nivel nuevo o no:
 	print(get_node("/root/Global").level2_On)
 	if get_node("/root/Global").level2_On == 0:
 		get_tree().change_scene("res://level_2/level2_final.tscn")	
 	else:
+
 		get_tree().change_scene("res://sceneSaveLevel2.tscn")
 

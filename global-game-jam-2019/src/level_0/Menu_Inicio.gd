@@ -11,6 +11,9 @@ func _ready():
 	get_node("/root/Global").inv_slot = ["vacio", "vacio","vacio","vacio"]
 	get_node("/root/Global").alcoholEnSangre = 0
 	get_node("/root/Global").level2_On = 0
+	var dir = Directory.new()
+	dir.remove("res://sceneSaveLevel1.tscn")
+	dir.remove("res://sceneSaveLevel2.tscn")
 	pass
 
 func _process(delta):
